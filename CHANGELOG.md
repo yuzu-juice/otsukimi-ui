@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.5](https://github.com/yuzu-juice/otsukimi-ui/compare/otsukimi-ui-v0.0.4...otsukimi-ui-v0.0.5) (2026-06-14)
+
+
+### Bug Fixes
+
+* trigger release for repository metadata ([#14](https://github.com/yuzu-juice/otsukimi-ui/issues/14)) ([8fbfab5](https://github.com/yuzu-juice/otsukimi-ui/commit/8fbfab536134d845e6bd947bcd24028d42347361))
+
 ## [0.0.4](https://github.com/yuzu-juice/otsukimi-ui/compare/otsukimi-ui-v0.0.3...otsukimi-ui-v0.0.4) (2026-06-14)
 
 
