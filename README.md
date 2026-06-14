@@ -51,11 +51,27 @@ console.log(version);
 
 ## Release
 
-Releases are published via GitHub Actions when a version tag is pushed.
+Releases are managed by **release-please** and published to npm via GitHub Actions.
 
-```bash
-git checkout main
-git pull origin main
-git tag -a v0.0.1 -m "Release v0.0.1"
-git push origin v0.0.1
-```
+### Pull Request titles
+
+This repository uses **Squash and Merge**. The PR title becomes the final commit message on `main`, so PR titles should follow Conventional Commits.
+
+### Version bumps
+
+release-please determines releases from commit messages:
+
+- `fix: ...` → patch release
+- `feat: ...` → minor release
+- `feat!: ...`, `fix!: ...`, `refactor!: ...`, etc. → major release
+- `docs: ...`, `chore: ...`, `ci: ...`, `test: ...` → no release by default
+
+Use `fix:` or `feat:` when the change should be included in an npm release.
+
+### Release flow
+
+1. Merge PRs into `main` using squash merge.
+2. release-please opens a release PR.
+3. Merge the release PR.
+4. GitHub creates a version tag and release.
+5. GitHub Actions publishes the package to npm.
