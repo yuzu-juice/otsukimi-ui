@@ -48,3 +48,14 @@ import { version } from "otsukimi-ui";
 
 console.log(version);
 ```
+
+## Release
+
+Releases are published via GitHub Actions when a version tag is pushed.
+
+```bash
+git checkout main
+git pull origin main
+git tag -a v0.0.1 -m "Release v0.0.1"
+git push origin v0.0.1
+```
