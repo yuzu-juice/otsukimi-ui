@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.4](https://github.com/yuzu-juice/otsukimi-ui/compare/otsukimi-ui-v0.0.3...otsukimi-ui-v0.0.4) (2026-06-14)
+
+
+### Bug Fixes
+
+* replace publish worlflow ([#11](https://github.com/yuzu-juice/otsukimi-ui/issues/11)) ([eb4fd71](https://github.com/yuzu-juice/otsukimi-ui/commit/eb4fd712fc76b7fa298d504ccb8c2e73cc33beb7))
+
 ## [0.0.3](https://github.com/yuzu-juice/otsukimi-ui/compare/otsukimi-ui-v0.0.2...otsukimi-ui-v0.0.3) (2026-06-14)
 
 
