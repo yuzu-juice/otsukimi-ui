@@ -2,7 +2,8 @@ name: Publish
 
 on:
   push:
-    tags: ["v*.*.*"]
+    tags:
+      - "otsukimi-ui-v*.*.*"
 
 permissions:
   contents: read
@@ -11,20 +12,22 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v6
+
       - uses: pnpm/action-setup@v6
         with:
           version: 11
+
       - uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: pnpm
           cache-dependency-path: pnpm-lock.yaml
           registry-url: https://registry.npmjs.org
+
       - run: pnpm install --frozen-lockfile
       - run: pnpm typecheck
       - run: pnpm build
-      - run: npm publish --provenance
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - run: pnpm publish --provenance
