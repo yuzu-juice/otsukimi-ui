@@ -40,3 +40,5 @@ jobs:
       - run: pnpm typecheck
       - run: pnpm build
       - run: pnpm publish --provenance
+        env:
+          HUSKY: 0
