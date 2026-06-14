@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.0](https://github.com/yuzu-juice/otsukimi-ui/compare/otsukimi-ui-v0.0.5...otsukimi-ui-v0.1.0) (2026-06-14)
+
+
+### Features
+
+* add foundation tokens ([#16](https://github.com/yuzu-juice/otsukimi-ui/issues/16)) ([84b3279](https://github.com/yuzu-juice/otsukimi-ui/commit/84b327927476541a5af70b4e7547c4bee17fba4a))
+
 ## [0.0.5](https://github.com/yuzu-juice/otsukimi-ui/compare/otsukimi-ui-v0.0.4...otsukimi-ui-v0.0.5) (2026-06-14)
 
 
