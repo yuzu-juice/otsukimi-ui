@@ -1,0 +1,48 @@
+.otsukimi-accordion {
+  width: 320px;
+}
+
+.otsukimi-accordion-header {
+  height: 48px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 0 16px;
+
+  border-radius: var(--otsukimi-radius-md);
+  border: 1px solid var(--otsukimi-color-border-default);
+
+  background: var(--otsukimi-color-bg-surface);
+
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+
+  color: var(--otsukimi-color-text-primary);
+}
+
+.otsukimi-accordion-open .otsukimi-accordion-header {
+  border-color: var(--otsukimi-color-brand-primary-deep);
+}
+
+.otsukimi-accordion-header svg {
+  width: 24px;
+  height: 24px;
+
+  color: var(--otsukimi-color-brand-primary-deep);
+}
+
+.otsukimi-accordion-content {
+  padding: 16px 27px;
+
+  font-family: "LINE Seed JP", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+
+  line-height: 1.5;
+
+  color: var(--otsukimi-color-text-primary);
+}

@@ -1,0 +1,31 @@
+.otsukimi-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 6px 12px;
+
+  border-radius: var(--otsukimi-radius-full);
+
+  font-family: "LINE Seed JP", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+
+  color: var(--otsukimi-color-text-primary);
+}
+
+.otsukimi-badge-default {
+  background: var(--otsukimi-color-secondary);
+}
+
+.otsukimi-badge-primary {
+  background: var(--otsukimi-color-brand-primary-soft);
+}
+
+.otsukimi-badge-moonlight {
+  background: var(--otsukimi-color-highlight-soft);
+}
+
+.otsukimi-badge-accent-soft {
+  background: var(--otsukimi-color-accent-soft);
+}

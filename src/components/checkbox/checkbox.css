@@ -1,0 +1,48 @@
+.otsukimi-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  font-family: "LINE Seed JP", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+
+  color: var(--otsukimi-color-text-primary);
+
+  cursor: pointer;
+}
+
+.otsukimi-checkbox-box {
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid var(--otsukimi-color-border-default);
+  border-radius: var(--otsukimi-radius-xs);
+
+  background: var(--otsukimi-color-bg-surface);
+}
+
+.otsukimi-checkbox-star-checked,
+.otsukimi-checkbox-moon-checked {
+  background: var(--otsukimi-color-brand-primary-deep);
+  border-color: var(--otsukimi-color-brand-primary-deep);
+}
+
+.otsukimi-checkbox-box svg {
+  width: 24px;
+  height: 24px;
+}
+
+.otsukimi-checkbox-star-checked svg,
+.otsukimi-checkbox-moon-checked svg {
+  color: var(--otsukimi-color-highlight-default);
+}
+
+.otsukimi-checkbox-label {
+  line-height: 1;
+}

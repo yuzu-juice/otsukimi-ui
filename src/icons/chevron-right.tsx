@@ -13,6 +13,7 @@ export function ChevronRightIcon({ title, ...props }: IconProps) {
       {...props}
     >
       {title ? <title>{title}</title> : null}
+
       <circle
         cx="12"
         cy="12"

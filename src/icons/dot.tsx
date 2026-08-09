@@ -13,6 +13,7 @@ export function DotIcon({ title, ...props }: IconProps) {
       {...props}
     >
       {title ? <title>{title}</title> : null}
+
       <circle cx="12" cy="12" r="5" fill="currentColor" />
     </svg>
   );
