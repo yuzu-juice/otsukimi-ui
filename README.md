@@ -41,14 +41,6 @@ yarn add otsukimi-ui
 bun add otsukimi-ui
 ```
 
-## Usage
-
-```ts
-import { version } from "otsukimi-ui";
-
-console.log(version);
-```
-
 ## Release
 
 Releases are managed by **release-please** and published to npm via GitHub Actions.
