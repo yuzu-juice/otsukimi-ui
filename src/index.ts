@@ -9,3 +9,4 @@ export { RadioButton } from "./components/radio-button";
 export { Accordion } from "./components/accordion";
 export { Divider } from "./components/divider";
 export { Link } from "./components/link";
+export { SearchBar } from "./components/search-bar";
