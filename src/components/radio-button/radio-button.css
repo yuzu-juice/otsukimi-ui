@@ -3,13 +3,25 @@
   align-items: center;
   gap: 13px;
 
-  font-family: "LINE Seed JP", sans-serif;
+  font-family: var(--otsukimi-font-body-family);
   font-size: 16px;
   font-weight: 400;
 
   color: var(--otsukimi-color-text-primary);
 
   cursor: pointer;
+}
+
+.otsukimi-radio-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
 }
 
 .otsukimi-radio-circle {
@@ -25,10 +37,22 @@
 
   background: var(--otsukimi-color-bg-surface);
   border: 2px solid var(--otsukimi-color-border-default);
+
+  transition: border-color 0.15s ease;
 }
 
-.otsukimi-radio-checked {
+.otsukimi-radio-input:checked + .otsukimi-radio-circle {
   border-color: var(--otsukimi-color-brand-primary-deep);
+}
+
+.otsukimi-radio-input:focus-visible + .otsukimi-radio-circle {
+  outline: 2px solid var(--otsukimi-color-brand-primary-deep);
+  outline-offset: 2px;
+}
+
+.otsukimi-radio-input:disabled + .otsukimi-radio-circle {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .otsukimi-radio-dot {
@@ -38,8 +62,20 @@
   border-radius: 50%;
 
   background: var(--otsukimi-color-brand-primary-deep);
+  display: none;
+}
+
+.otsukimi-radio-input:checked + .otsukimi-radio-circle .otsukimi-radio-dot {
+  display: block;
 }
 
 .otsukimi-radio-label {
   line-height: 1;
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .otsukimi-radio-circle {
+    transition: none;
+  }
 }

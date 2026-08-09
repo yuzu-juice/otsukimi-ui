@@ -3,13 +3,25 @@
   align-items: center;
   gap: 12px;
 
-  font-family: "LINE Seed JP", sans-serif;
+  font-family: var(--otsukimi-font-body-family);
   font-size: 16px;
   font-weight: 400;
 
   color: var(--otsukimi-color-text-primary);
 
   cursor: pointer;
+}
+
+.otsukimi-checkbox-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
 }
 
 .otsukimi-checkbox-box {
@@ -25,24 +37,59 @@
   border-radius: var(--otsukimi-radius-xs);
 
   background: var(--otsukimi-color-bg-surface);
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease;
 }
 
-.otsukimi-checkbox-star-checked,
-.otsukimi-checkbox-moon-checked {
+.otsukimi-checkbox-input:checked + .otsukimi-checkbox-box {
   background: var(--otsukimi-color-brand-primary-deep);
   border-color: var(--otsukimi-color-brand-primary-deep);
+}
+
+.otsukimi-checkbox-input:focus-visible + .otsukimi-checkbox-box {
+  outline: 2px solid var(--otsukimi-color-brand-primary-deep);
+  outline-offset: 2px;
+}
+
+.otsukimi-checkbox-input:disabled + .otsukimi-checkbox-box {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .otsukimi-checkbox-box svg {
   width: 24px;
   height: 24px;
+  display: none;
 }
 
-.otsukimi-checkbox-star-checked svg,
-.otsukimi-checkbox-moon-checked svg {
+.otsukimi-checkbox-icon-moon {
   color: var(--otsukimi-color-highlight-default);
+}
+
+.otsukimi-checkbox-star
+  .otsukimi-checkbox-input:checked
+  + .otsukimi-checkbox-box
+  .otsukimi-checkbox-icon-star {
+  display: block;
+  color: var(--otsukimi-color-highlight-default);
+}
+
+.otsukimi-checkbox-moon
+  .otsukimi-checkbox-input:checked
+  + .otsukimi-checkbox-box
+  .otsukimi-checkbox-icon-moon {
+  display: block;
 }
 
 .otsukimi-checkbox-label {
   line-height: 1;
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .otsukimi-checkbox-box {
+    transition: none;
+  }
 }

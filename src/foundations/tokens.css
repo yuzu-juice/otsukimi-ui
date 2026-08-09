@@ -3,11 +3,11 @@
   --otsukimi-color-bg-surface: #ffffff;
   --otsukimi-color-brand-primary: #dca3ff;
   --otsukimi-color-brand-primary-soft: #efd6ff;
-  --otsukimi-color-brand-primary-deep: #7b8cff;
+  --otsukimi-color-brand-primary-deep: #5560c9;
   --otsukimi-color-accent-default: #8edaf7;
   --otsukimi-color-accent-soft: #cdefff;
   --otsukimi-color-text-primary: #483354;
-  --otsukimi-color-text-secondary: #7a7691;
+  --otsukimi-color-text-secondary: #6f6a86;
   --otsukimi-color-border-default: #e8dcf3;
   --otsukimi-color-highlight-default: #ffbc00;
   --otsukimi-color-highlight-soft: #fff3c7;
@@ -25,6 +25,13 @@
   --otsukimi-spacing-4: 24px;
   --otsukimi-spacing-5: 32px;
   --otsukimi-spacing-6: 64px;
+
+  --otsukimi-font-body-family:
+    "LINE Seed JP", "Zen Maru Gothic", "Hiragino Kaku Gothic ProN", "Noto Sans JP", system-ui,
+    sans-serif;
+  --otsukimi-font-heading-family:
+    "Zen Maru Gothic", "LINE Seed JP", "Hiragino Kaku Gothic ProN", "Noto Sans JP", system-ui,
+    sans-serif;
 
   --otsukimi-shadow-sm: 0 4px 8px rgb(221 183 244 / 10%), 0 2px 4px rgb(0 0 0 / 3%);
 

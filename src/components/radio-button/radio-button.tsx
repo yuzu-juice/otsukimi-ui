@@ -1,20 +1,30 @@
+import { useId, type InputHTMLAttributes } from "react";
 import "./radio-button.css";
 
-type RadioButtonProps = {
-  state?: "unchecked" | "checked";
+type RadioButtonProps = Omit<InputHTMLAttributes<HTMLInputElement>, "type"> & {
   label?: string;
 };
 
-export function RadioButton({ state = "unchecked", label }: RadioButtonProps) {
-  return (
-    <label className="otsukimi-radio-button">
-      <span className={`otsukimi-radio-circle otsukimi-radio-${state}`} aria-hidden="true">
-        {state === "checked" && <span className="otsukimi-radio-dot" />}
-      </span>
+export function RadioButton({ label, ...props }: RadioButtonProps) {
+  const id = useId();
 
-      <span className="otsukimi-radio-label">
-        {label ?? (state === "checked" ? "チェックしている" : "チェックしていない")}
-      </span>
-    </label>
+  return (
+    <span className="otsukimi-radio-button">
+      <input
+        id={id}
+        type="radio"
+        className="otsukimi-radio-input"
+        aria-label={label ? undefined : "radio button"}
+        {...props}
+      />
+      <label htmlFor={id} className="otsukimi-radio-circle" aria-hidden="true">
+        <span className="otsukimi-radio-dot" />
+      </label>
+      {label && (
+        <label htmlFor={id} className="otsukimi-radio-label">
+          {label}
+        </label>
+      )}
+    </span>
   );
 }

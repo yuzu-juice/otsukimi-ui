@@ -1,5 +1,6 @@
 .otsukimi-search-bar {
-  width: 409px;
+  width: 100%;
+  max-width: 409px;
   height: 48px;
 
   display: flex;
@@ -8,12 +9,10 @@
 }
 
 .otsukimi-search-bar-input {
-  width: 320px;
+  flex: 1;
+  min-width: 0;
   height: 48px;
   box-sizing: border-box;
-
-  display: flex;
-  align-items: center;
 
   padding: 0 16px;
 
@@ -22,11 +21,26 @@
 
   background: var(--otsukimi-color-bg-surface);
 
-  font-family: "LINE Seed JP", sans-serif;
+  font-family: var(--otsukimi-font-body-family);
   font-size: 16px;
   font-weight: 400;
 
+  color: var(--otsukimi-color-text-primary);
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.otsukimi-search-bar-input::placeholder {
   color: var(--otsukimi-color-text-secondary);
+}
+
+.otsukimi-search-bar-input:focus-visible {
+  outline: none;
+  border: 2px solid var(--otsukimi-color-brand-primary-deep);
+  box-shadow: var(--otsukimi-shadow-sm);
+  padding: 0 15px;
 }
 
 .otsukimi-search-bar-button {
@@ -40,23 +54,44 @@
 
   padding: 12px 20px;
 
-  border: none;
+  border: 1px solid var(--otsukimi-color-brand-primary);
   border-radius: var(--otsukimi-radius-full);
 
-  font-family: "LINE Seed JP", sans-serif;
+  font-family: var(--otsukimi-font-body-family);
   font-size: 16px;
   font-weight: 700;
 
-  color: var(--otsukimi-color-bg-surface);
+  color: var(--otsukimi-color-text-primary);
 
   background: linear-gradient(
     90deg,
-    var(--otsukimi-color-brand-primary-deep),
-    #ac97ff,
-    var(--otsukimi-color-brand-primary)
+    var(--otsukimi-color-brand-primary-soft),
+    var(--otsukimi-color-secondary),
+    var(--otsukimi-color-accent-soft)
   );
 
   box-shadow: var(--otsukimi-shadow-md);
 
   cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.otsukimi-search-bar-button:hover {
+  box-shadow: var(--otsukimi-shadow-lg);
+  transform: translateY(-1px);
+}
+
+.otsukimi-search-bar-button:focus-visible {
+  outline: 2px solid var(--otsukimi-color-brand-primary-deep);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .otsukimi-search-bar-input,
+  .otsukimi-search-bar-button {
+    transition: none;
+  }
 }

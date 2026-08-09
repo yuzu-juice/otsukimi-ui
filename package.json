@@ -16,7 +16,8 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
-    "./tokens.css": "./dist/tokens.css"
+    "./tokens.css": "./dist/tokens.css",
+    "./index.css": "./dist/index.css"
   },
   "sideEffects": [
     "**/*.css"

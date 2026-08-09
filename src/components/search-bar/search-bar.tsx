@@ -1,14 +1,48 @@
-import type { HTMLAttributes } from "react";
+import { useState, type FormHTMLAttributes } from "react";
 import "./search-bar.css";
 
-type SearchBarProps = HTMLAttributes<HTMLDivElement>;
+type SearchBarProps = Omit<FormHTMLAttributes<HTMLFormElement>, "onSubmit" | "onChange"> & {
+  placeholder?: string;
+  defaultValue?: string;
+  onChange?: (value: string) => void;
+  onSearch?: (value: string) => void;
+  buttonLabel?: string;
+};
 
-export function SearchBar(props: SearchBarProps) {
+export function SearchBar({
+  placeholder = "検索したいことを入力するよ",
+  defaultValue = "",
+  onChange,
+  onSearch,
+  buttonLabel = "検索",
+  ...props
+}: SearchBarProps) {
+  const [value, setValue] = useState(defaultValue);
+
+  const handleChange = (next: string) => {
+    setValue(next);
+    onChange?.(next);
+  };
+
   return (
-    <div className="otsukimi-search-bar" {...props}>
-      <div className="otsukimi-search-bar-input">検索したいことを入力するよ</div>
-
-      <button className="otsukimi-search-bar-button">検索</button>
-    </div>
+    <form
+      className="otsukimi-search-bar"
+      onSubmit={(e) => {
+        e.preventDefault();
+        onSearch?.(value.trim());
+      }}
+      {...props}
+    >
+      <input
+        type="search"
+        className="otsukimi-search-bar-input"
+        placeholder={placeholder}
+        value={value}
+        onChange={(e) => handleChange(e.target.value)}
+      />
+      <button type="submit" className="otsukimi-search-bar-button">
+        {buttonLabel}
+      </button>
+    </form>
   );
 }

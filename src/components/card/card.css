@@ -1,6 +1,7 @@
 .otsukimi-card {
-  width: 320px;
-  height: 158px;
+  width: 100%;
+  max-width: 320px;
+  min-height: 158px;
   box-sizing: border-box;
 
   padding: 24px 28px;
@@ -13,7 +14,7 @@
   flex-direction: column;
   gap: 8px;
 
-  font-family: "Zen Maru Gothic", sans-serif;
+  font-family: var(--otsukimi-font-heading-family);
   font-size: 20px;
   font-weight: 500;
   color: var(--otsukimi-color-text-primary);

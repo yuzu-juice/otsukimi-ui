@@ -1,5 +1,6 @@
 .otsukimi-input {
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
   height: 48px;
   box-sizing: border-box;
 
@@ -15,19 +16,37 @@
   font-weight: 400;
 
   color: var(--otsukimi-color-text-primary);
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
 .otsukimi-input::placeholder {
   color: var(--otsukimi-color-text-secondary);
 }
 
+.otsukimi-input:focus-visible {
+  outline: none;
+  border: 2px solid var(--otsukimi-color-brand-primary-deep);
+  box-shadow: var(--otsukimi-shadow-sm);
+  padding: 0 15px;
+}
+
 .otsukimi-input-focus {
   border: 2px solid var(--otsukimi-color-brand-primary-deep);
   box-shadow: var(--otsukimi-shadow-sm);
+  padding: 0 15px;
 }
 
 .otsukimi-input-disabled {
   background: var(--otsukimi-color-bg-base);
   border: 1px solid var(--otsukimi-color-border-default);
   opacity: 0.8;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .otsukimi-input {
+    transition: none;
+  }
 }

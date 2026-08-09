@@ -1,3 +1,4 @@
+import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Checkbox } from "../components/checkbox";
 
@@ -7,11 +8,6 @@ const meta = {
   parameters: {
     layout: "centered",
   },
-  argTypes: {
-    state: {
-      control: false,
-    },
-  },
 } satisfies Meta<typeof Checkbox>;
 
 export default meta;
@@ -20,18 +16,34 @@ type Story = StoryObj<typeof meta>;
 
 export const Unchecked: Story = {
   args: {
-    state: "unchecked",
+    label: "チェックしていない",
   },
 };
 
 export const StarChecked: Story = {
   args: {
-    state: "star-checked",
+    defaultChecked: true,
+    label: "チェックしている",
   },
 };
 
 export const MoonChecked: Story = {
   args: {
-    state: "moon-checked",
+    variant: "moon",
+    defaultChecked: true,
+    label: "チェックしている",
+  },
+};
+
+export const Interactive: Story = {
+  render: () => {
+    const [checked, setChecked] = useState(false);
+    return (
+      <Checkbox
+        checked={checked}
+        onChange={(e) => setChecked(e.target.checked)}
+        label="クリックで切り替え"
+      />
+    );
   },
 };

@@ -4,7 +4,7 @@ import "./link.css";
 
 type LinkProps = AnchorHTMLAttributes<HTMLAnchorElement>;
 
-export function Link({ children = "これはリンクです", ...props }: LinkProps) {
+export function Link({ children, ...props }: LinkProps) {
   return (
     <a className="otsukimi-link" {...props}>
       <span>{children}</span>

@@ -41,6 +41,18 @@ yarn add otsukimi-ui
 bun add otsukimi-ui
 ```
 
+## Usage
+
+Components need the design tokens and component styles. Import the CSS once:
+
+```tsx
+import { Button, Input } from "otsukimi-ui";
+import "otsukimi-ui/tokens.css"; // design tokens (colors, radii, spacing)
+import "otsukimi-ui/index.css"; // component styles
+```
+
+`otsukimi-ui` requires React 19 as a peer dependency.
+
 ## Release
 
 Releases are managed by **release-please** and published to npm via GitHub Actions.
