@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/yuzu-juice/otsukimi-ui/compare/otsukimi-ui-v0.1.0...otsukimi-ui-v0.2.0) (2026-08-09)
+
+
+### Features
+
+* button component ([#21](https://github.com/yuzu-juice/otsukimi-ui/issues/21)) ([79f7d0b](https://github.com/yuzu-juice/otsukimi-ui/commit/79f7d0b806c7df7def341becdb3d8284f950446f))
+
 ## [0.1.0](https://github.com/yuzu-juice/otsukimi-ui/compare/otsukimi-ui-v0.0.5...otsukimi-ui-v0.1.0) (2026-06-14)
 
 
