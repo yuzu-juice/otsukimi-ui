@@ -26,3 +26,4 @@ jobs:
       - run: pnpm format:check
       - run: pnpm typecheck
       - run: pnpm build
+      - run: pnpm build-storybook
