@@ -1,0 +1,19 @@
+.otsukimi-divider {
+  width: 300px;
+  height: 1px;
+
+  background: var(--otsukimi-color-border-default);
+}
+
+.otsukimi-divider-dashed {
+  width: 301px;
+  height: 1px;
+
+  background: repeating-linear-gradient(
+    to right,
+    var(--otsukimi-color-border-default) 0,
+    var(--otsukimi-color-border-default) 4px,
+    transparent 4px,
+    transparent 8px
+  );
+}

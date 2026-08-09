@@ -7,3 +7,4 @@ export { Badge } from "./components/badge";
 export { Checkbox } from "./components/checkbox";
 export { RadioButton } from "./components/radio-button";
 export { Accordion } from "./components/accordion";
+export { Divider } from "./components/divider";
