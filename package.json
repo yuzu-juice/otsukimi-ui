@@ -16,13 +16,13 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
-    "./tokens.css": "./src/foundations/tokens.css"
+    "./tokens.css": "./dist/tokens.css"
   },
   "sideEffects": [
     "**/*.css"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "build": "tsup src/index.ts --format esm,cjs --dts && cp src/foundations/tokens.css dist/tokens.css",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "pnpm build",
     "format": "prettier --write .",
