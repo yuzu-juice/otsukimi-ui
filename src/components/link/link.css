@@ -20,7 +20,8 @@
   transition: text-decoration-color 0.15s ease;
 }
 
-.otsukimi-link:hover {
+.otsukimi-link:hover,
+.otsukimi-link:focus-visible {
   text-decoration-color: var(--otsukimi-color-brand-primary-deep);
 }
 

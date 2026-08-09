@@ -3,6 +3,8 @@
   align-items: center;
   gap: 13px;
 
+  position: relative;
+
   font-family: var(--otsukimi-font-body-family);
   font-size: 16px;
   font-weight: 400;
@@ -52,6 +54,9 @@
 
 .otsukimi-radio-input:disabled + .otsukimi-radio-circle {
   opacity: 0.5;
+}
+
+.otsukimi-radio-button:has(.otsukimi-radio-input:disabled) {
   cursor: not-allowed;
 }
 

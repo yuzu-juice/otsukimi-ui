@@ -53,6 +53,10 @@ import "otsukimi-ui/index.css"; // component styles
 
 `otsukimi-ui` requires React 19 as a peer dependency.
 
+> Note: the font tokens (`--otsukimi-font-body-family` / `--otsukimi-font-heading-family`)
+> reference "LINE Seed JP" and "Zen Maru Gothic", but the library does not load these fonts.
+> Consumers should self-host or bundle them, otherwise the system fallback is used.
+
 ## Release
 
 Releases are managed by **release-please** and published to npm via GitHub Actions.

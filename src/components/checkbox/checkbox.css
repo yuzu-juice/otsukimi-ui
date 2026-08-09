@@ -3,6 +3,8 @@
   align-items: center;
   gap: 12px;
 
+  position: relative;
+
   font-family: var(--otsukimi-font-body-family);
   font-size: 16px;
   font-weight: 400;
@@ -55,6 +57,9 @@
 
 .otsukimi-checkbox-input:disabled + .otsukimi-checkbox-box {
   opacity: 0.5;
+}
+
+.otsukimi-checkbox:has(.otsukimi-checkbox-input:disabled) {
   cursor: not-allowed;
 }
 

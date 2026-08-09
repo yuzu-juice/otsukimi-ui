@@ -7,6 +7,7 @@ type SearchBarProps = Omit<FormHTMLAttributes<HTMLFormElement>, "onSubmit" | "on
   onChange?: (value: string) => void;
   onSearch?: (value: string) => void;
   buttonLabel?: string;
+  searchLabel?: string;
 };
 
 export function SearchBar({
@@ -15,6 +16,7 @@ export function SearchBar({
   onChange,
   onSearch,
   buttonLabel = "検索",
+  searchLabel = "検索",
   ...props
 }: SearchBarProps) {
   const [value, setValue] = useState(defaultValue);
@@ -37,6 +39,7 @@ export function SearchBar({
         type="search"
         className="otsukimi-search-bar-input"
         placeholder={placeholder}
+        aria-label={searchLabel}
         value={value}
         onChange={(e) => handleChange(e.target.value)}
       />
