@@ -4,20 +4,20 @@ source of truth: `src/foundations/tokens.css`
 
 ## Color
 
-| Token                            | Value     |
-| -------------------------------- | --------- |
-| color-bg-base                    | `#FAF8FF` |
-| color-bg-surface                 | `#FFFFFF` |
-| color-brand-primary              | `#DCA3FF` |
-| color-brand-primary-soft         | `#EFD6FF` |
-| color-brand-primary-deep         | `#7B8CFF` |
-| color-accent-default             | `#8EDAF7` |
-| color-accent-soft                | `#CDEFFF` |
-| color-text-primary               | `#483354` |
-| color-text-secondary             | `#7A7691` |
-| color-border-default             | `#E8DCF3` |
-| color-highlight-default          | `#FFBC00` |
-| color-highlight-soft             | `#FFF3C7` |
+| Token                    | Value     |
+| ------------------------ | --------- |
+| color-bg-base            | `#FAF8FF` |
+| color-bg-surface         | `#FFFFFF` |
+| color-brand-primary      | `#DCA3FF` |
+| color-brand-primary-soft | `#EFD6FF` |
+| color-brand-primary-deep | `#7B8CFF` |
+| color-accent-default     | `#8EDAF7` |
+| color-accent-soft        | `#CDEFFF` |
+| color-text-primary       | `#483354` |
+| color-text-secondary     | `#7A7691` |
+| color-border-default     | `#E8DCF3` |
+| color-highlight-default  | `#FFBC00` |
+| color-highlight-soft     | `#FFF3C7` |
 
 ---
 
@@ -35,14 +35,14 @@ source of truth: `src/foundations/tokens.css`
 
 ## Spacing
 
-| Token      | Value |
-| ---------- | ----- |
-| spacing-1  | 4px   |
-| spacing-2  | 8px   |
-| spacing-3  | 16px  |
-| spacing-4  | 24px  |
-| spacing-5  | 32px  |
-| spacing-6  | 64px  |
+| Token     | Value |
+| --------- | ----- |
+| spacing-1 | 4px   |
+| spacing-2 | 8px   |
+| spacing-3 | 16px  |
+| spacing-4 | 24px  |
+| spacing-5 | 32px  |
+| spacing-6 | 64px  |
 
 ---
 
