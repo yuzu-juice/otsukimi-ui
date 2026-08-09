@@ -1,0 +1,20 @@
+.otsukimi-card {
+  width: 320px;
+  height: 158px;
+  box-sizing: border-box;
+
+  padding: 24px 28px;
+
+  border-radius: var(--otsukimi-radius-md);
+  background: var(--otsukimi-color-bg-surface);
+  box-shadow: var(--otsukimi-shadow-md);
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--otsukimi-color-text-primary);
+}
