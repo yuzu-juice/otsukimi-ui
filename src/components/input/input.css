@@ -1,0 +1,33 @@
+.otsukimi-input {
+  width: 320px;
+  height: 48px;
+  box-sizing: border-box;
+
+  padding: 0 16px;
+
+  border-radius: var(--otsukimi-radius-md);
+  border: 1px solid var(--otsukimi-color-border-default);
+
+  background: var(--otsukimi-color-bg-surface);
+
+  font-family: var(--otsukimi-font-body-family);
+  font-size: 16px;
+  font-weight: 400;
+
+  color: var(--otsukimi-color-text-primary);
+}
+
+.otsukimi-input::placeholder {
+  color: var(--otsukimi-color-text-secondary);
+}
+
+.otsukimi-input-focus {
+  border: 2px solid var(--otsukimi-color-brand-primary-deep);
+  box-shadow: var(--otsukimi-shadow-sm);
+}
+
+.otsukimi-input-disabled {
+  background: var(--otsukimi-color-bg-base);
+  border: 1px solid var(--otsukimi-color-border-default);
+  opacity: 0.8;
+}
