@@ -1,0 +1,65 @@
+.otsukimi-button {
+  height: 48px;
+  width: 160px;
+  box-sizing: border-box;
+
+  border-radius: var(--otsukimi-radius-full);
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  font-family: var(--otsukimi-font-body-family);
+  font-size: 16px;
+  font-weight: 700;
+
+  color: var(--otsukimi-color-bg-surface);
+
+  background: linear-gradient(
+    90deg,
+    var(--otsukimi-color-brand-primary-deep),
+    #ac97ff,
+    var(--otsukimi-color-brand-primary)
+  );
+
+  box-shadow: var(--otsukimi-shadow-md);
+
+  cursor: pointer;
+}
+
+.otsukimi-button-focus,
+.otsukimi-button-moon-focus {
+  border: 2px solid var(--otsukimi-color-highlight-default);
+}
+
+.otsukimi-button-disabled {
+  background: var(--otsukimi-color-border-default);
+  color: var(--otsukimi-color-text-secondary);
+  box-shadow: var(--otsukimi-shadow-sm);
+  cursor: not-allowed;
+}
+
+.otsukimi-button-transparent {
+  background: transparent;
+  border: 2px solid var(--otsukimi-color-border-default);
+  color: var(--otsukimi-color-text-primary);
+
+  box-shadow: var(--otsukimi-shadow-sm);
+}
+
+.otsukimi-button-moon,
+.otsukimi-button-moon-focus {
+  gap: 5px;
+}
+
+.otsukimi-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+.otsukimi-button-moon svg,
+.otsukimi-button-moon-focus svg {
+  color: var(--otsukimi-color-highlight-default);
+}

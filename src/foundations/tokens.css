@@ -24,4 +24,10 @@
   --otsukimi-spacing-4: 24px;
   --otsukimi-spacing-5: 32px;
   --otsukimi-spacing-6: 64px;
+
+  --otsukimi-shadow-sm: 0 4px 8px rgb(221 183 244 / 10%), 0 2px 4px rgb(0 0 0 / 3%);
+
+  --otsukimi-shadow-md: 0 8px 24px rgb(221 183 244 / 15%), 0 2px 8px rgb(0 0 0 / 5%);
+
+  --otsukimi-shadow-lg: 0 16px 48px rgb(221 183 244 / 20%), 0 4px 16px rgb(0 0 0 / 6%);
 }
