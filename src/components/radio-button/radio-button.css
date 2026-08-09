@@ -1,0 +1,45 @@
+.otsukimi-radio-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+
+  font-family: "LINE Seed JP", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+
+  color: var(--otsukimi-color-text-primary);
+
+  cursor: pointer;
+}
+
+.otsukimi-radio-circle {
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--otsukimi-color-bg-surface);
+  border: 2px solid var(--otsukimi-color-border-default);
+}
+
+.otsukimi-radio-checked {
+  border-color: var(--otsukimi-color-brand-primary-deep);
+}
+
+.otsukimi-radio-dot {
+  width: 16px;
+  height: 16px;
+
+  border-radius: 50%;
+
+  background: var(--otsukimi-color-brand-primary-deep);
+}
+
+.otsukimi-radio-label {
+  line-height: 1;
+}
