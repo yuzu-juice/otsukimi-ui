@@ -6,3 +6,4 @@ export { Card } from "./components/card";
 export { Badge } from "./components/badge";
 export { Checkbox } from "./components/checkbox";
 export { RadioButton } from "./components/radio-button";
+export { Accordion } from "./components/accordion";
