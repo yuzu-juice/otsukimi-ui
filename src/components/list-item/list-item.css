@@ -1,0 +1,33 @@
+.otsukimi-list-item {
+  display: flex;
+  align-items: center;
+
+  height: 24px;
+
+  font-family: "LINE Seed JP", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+
+  color: var(--otsukimi-color-text-primary);
+}
+
+.otsukimi-list-item-star {
+  gap: 5px;
+}
+
+.otsukimi-list-item-dot {
+  gap: 10px;
+}
+
+.otsukimi-list-item svg {
+  width: 24px;
+  height: 24px;
+}
+
+.otsukimi-list-item-star svg {
+  color: var(--otsukimi-color-highlight-default);
+}
+
+.otsukimi-list-item-dot svg {
+  color: var(--otsukimi-color-brand-primary-deep);
+}

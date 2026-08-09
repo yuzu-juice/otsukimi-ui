@@ -10,3 +10,4 @@ export { Accordion } from "./components/accordion";
 export { Divider } from "./components/divider";
 export { Link } from "./components/link";
 export { SearchBar } from "./components/search-bar";
+export { ListItem } from "./components/list-item";
