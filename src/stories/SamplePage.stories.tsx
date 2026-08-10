@@ -6,6 +6,7 @@ import {
   Card,
   Checkbox,
   Divider,
+  Input,
   Link,
   ListItem,
   RadioButton,
@@ -104,11 +105,77 @@ function SamplePage() {
         </Card>
       </section>
 
+      <section className="sample-page-states">
+        <Card className="sample-card state-card">
+          <h2>ボタン</h2>
+
+          <div className="state-row">
+            <Button>デフォルト</Button>
+            <Button state="moon">ムーン</Button>
+            <Button state="transparent">透明</Button>
+            <Button state="disabled">無効</Button>
+          </div>
+        </Card>
+
+        <Card className="sample-card state-card">
+          <h2>入力</h2>
+
+          <div className="state-col">
+            <Input placeholder="デフォルト" />
+            <Input state="focus" placeholder="フォーカス中" />
+            <Input state="disabled" placeholder="無効" />
+          </div>
+        </Card>
+
+        <Card className="sample-card state-card">
+          <h2>チェックボックス</h2>
+
+          <div className="state-col">
+            <Checkbox label="スター(チェック済み)" defaultChecked />
+            <Checkbox label="スター(未チェック)" />
+            <Checkbox label="ムーン(チェック済み)" variant="moon" defaultChecked />
+            <Checkbox label="無効" disabled />
+          </div>
+        </Card>
+
+        <Card className="sample-card state-card">
+          <h2>ラジオボタン</h2>
+
+          <div className="state-col">
+            <RadioButton label="チェック済み" defaultChecked />
+            <RadioButton label="未チェック" />
+            <RadioButton label="無効" disabled />
+          </div>
+        </Card>
+
+        <Card className="sample-card state-card">
+          <h2>バッジ</h2>
+
+          <div className="state-row">
+            <Badge>デフォルト</Badge>
+            <Badge variant="primary">プライマリ</Badge>
+            <Badge variant="moonlight">ムーンライト</Badge>
+            <Badge variant="accent-soft">アクセント</Badge>
+          </div>
+        </Card>
+      </section>
+
       <Card className="sample-card faq-card">
         <h2>よくある質問</h2>
 
-        <Accordion title="よくある質問" />
-        <Accordion title="よくある質問" />
+        <Accordion title="おつきみUIって何?" defaultOpen>
+          ゆめかわテイストのデザインシステムです。星と月をモチーフにした、
+          やさしい色あいのUIコンポーネントを提供しています。
+        </Accordion>
+
+        <Accordion title="React 19が必要?">
+          はい。otsukimi-ui は React 19 を peerDependency に持つため、 React 19 以上が必要です。
+        </Accordion>
+
+        <Accordion title="アクセシビリティは?">
+          キーボード操作・スクリーンリーダー対応を意識したコンポーネント構成です。 WCAG 2.2 AA
+          の完全監査は v1.0 で予定しています。
+        </Accordion>
       </Card>
     </main>
   );

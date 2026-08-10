@@ -1,7 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap");
+
 .sample-page {
   min-height: 100vh;
   padding: 37px 64px;
   box-sizing: border-box;
+
+  max-width: 1388px;
+  margin: 0 auto;
 
   background: var(--otsukimi-color-bg-base);
 
@@ -27,6 +32,7 @@
 
 .sample-page-actions {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
 
   margin-top: 24px;
@@ -72,6 +78,14 @@
   max-width: none;
 }
 
+.task-card .otsukimi-divider {
+  width: 100%;
+}
+
+.task-card .otsukimi-link {
+  margin-top: auto;
+}
+
 .task-list > div:not(.otsukimi-divider) {
   display: flex;
   justify-content: space-between;
@@ -98,22 +112,104 @@
   background: var(--otsukimi-color-bg-surface);
 }
 
+.feature-item:last-child {
+  margin-bottom: 0;
+}
+
 .setting-card {
   height: 432px;
 }
 
-.faq-card {
-  margin-top: 24px;
+.sample-page-states {
+  display: grid;
 
-  height: 215px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 39px;
+
+  margin-top: 39px;
+}
+
+.state-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.state-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.state-card .otsukimi-input {
+  max-width: none;
+}
+
+.faq-card {
+  margin-top: 39px;
+
+  min-height: 215px;
 
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  max-width: 560px;
 }
 
 .faq-card .otsukimi-accordion {
   max-width: none;
+}
+
+@keyframes sample-rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.sample-page-header {
+  animation: sample-rise 0.5s ease both;
+}
+
+.sample-page-grid > *,
+.sample-page-states > *,
+.faq-card {
+  animation: sample-rise 0.5s ease both;
+}
+
+.sample-page-grid > :nth-child(2),
+.sample-page-states > :nth-child(2) {
+  animation-delay: 0.08s;
+}
+
+.sample-page-grid > :nth-child(3),
+.sample-page-states > :nth-child(3) {
+  animation-delay: 0.16s;
+}
+
+.sample-page-states > :nth-child(4) {
+  animation-delay: 0.24s;
+}
+
+.sample-page-states > :nth-child(5) {
+  animation-delay: 0.32s;
+}
+
+.faq-card {
+  animation-delay: 0.24s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sample-page * {
+    animation: none;
+  }
 }
 
 @media (max-width: 1400px) {
