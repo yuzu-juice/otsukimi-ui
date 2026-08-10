@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1](https://github.com/yuzu-juice/otsukimi-ui/compare/otsukimi-ui-v1.0.0...otsukimi-ui-v1.0.1) (2026-08-10)
+
+
+### Bug Fixes
+
+* repair sample page layout breakage ([8ffb746](https://github.com/yuzu-juice/otsukimi-ui/commit/8ffb74646643eb2ca56c99652b6f7022c26788b5))
+* repair sample page layout breakage ([#33](https://github.com/yuzu-juice/otsukimi-ui/issues/33)) ([20a4b89](https://github.com/yuzu-juice/otsukimi-ui/commit/20a4b89bd8610c26573784a6756b57adfe061258))
+
 ## [1.0.0](https://github.com/yuzu-juice/otsukimi-ui/compare/otsukimi-ui-v0.3.0...otsukimi-ui-v1.0.0) (2026-08-10)
 
 
