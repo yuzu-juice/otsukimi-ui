@@ -50,7 +50,7 @@
   border-color: var(--otsukimi-color-brand-primary-deep);
 }
 
-.otsukimi-checkbox-input:focus + .otsukimi-checkbox-box {
+.otsukimi-checkbox-input:focus-visible + .otsukimi-checkbox-box {
   outline: 2px solid var(--otsukimi-color-brand-primary-deep);
   outline-offset: 2px;
 }

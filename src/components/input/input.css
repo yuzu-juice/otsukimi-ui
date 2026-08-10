@@ -26,7 +26,7 @@
   color: var(--otsukimi-color-text-secondary);
 }
 
-.otsukimi-input:focus {
+.otsukimi-input:focus-visible {
   outline: none;
   border: 2px solid var(--otsukimi-color-brand-primary-deep);
   box-shadow: var(--otsukimi-shadow-sm);
