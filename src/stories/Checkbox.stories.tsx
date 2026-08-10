@@ -1,4 +1,3 @@
-import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Checkbox } from "../components/checkbox";
 
@@ -32,18 +31,5 @@ export const MoonChecked: Story = {
     variant: "moon",
     defaultChecked: true,
     label: "チェックしている",
-  },
-};
-
-export const Interactive: Story = {
-  render: () => {
-    const [checked, setChecked] = useState(false);
-    return (
-      <Checkbox
-        checked={checked}
-        onChange={(e) => setChecked(e.target.checked)}
-        label="クリックで切り替え"
-      />
-    );
   },
 };

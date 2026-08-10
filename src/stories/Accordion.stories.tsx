@@ -1,4 +1,3 @@
-import { useState } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Accordion } from "../components/accordion";
 
@@ -14,28 +13,22 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Interactive: Story = {
-  render: () => {
-    const [open, setOpen] = useState(false);
-    return (
-      <Accordion open={open} onToggle={setOpen} title="よくある質問">
-        これは、よくある質問です。
-        <br />
-        ヘッダーをクリックすると開閉できます。
-      </Accordion>
-    );
+export const Closed: Story = {
+  args: {
+    open: false,
+    title: "よくある質問",
   },
 };
 
-export const DefaultOpen: Story = {
+export const Open: Story = {
   args: {
-    defaultOpen: true,
+    open: true,
     title: "よくある質問",
     children: (
       <>
         これは、よくある質問です。
         <br />
-        最初から開いた状態で表示されます。
+        よくある質問というのは、頻繁に問い合わせがあるということになります。
       </>
     ),
   },
