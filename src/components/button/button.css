@@ -10,7 +10,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 0.625em;
 
   font-family: var(--otsukimi-font-body-family);
   font-size: 1rem;
@@ -70,6 +70,10 @@
 
 .otsukimi-button-moon svg {
   color: var(--otsukimi-color-highlight-default);
+}
+
+.otsukimi-button-moon {
+  gap: 0.3125em;
 }
 
 @media (prefers-reduced-motion: reduce) {
