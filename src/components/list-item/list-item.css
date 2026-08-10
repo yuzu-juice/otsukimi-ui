@@ -4,19 +4,13 @@
 
   height: 1.5em;
 
+  gap: 0.625em;
+
   font-family: var(--otsukimi-font-body-family);
   font-size: 1rem;
   font-weight: 400;
 
   color: var(--otsukimi-color-text-primary);
-}
-
-.otsukimi-list-item-star {
-  gap: 5px;
-}
-
-.otsukimi-list-item-dot {
-  gap: 10px;
 }
 
 .otsukimi-list-item svg {
