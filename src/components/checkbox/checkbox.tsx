@@ -15,7 +15,12 @@ export function Checkbox({ variant = "star", label, className, id, ...props }: C
 
   return (
     <span className={cx("otsukimi-checkbox", `otsukimi-checkbox-${variant}`, className)}>
-      <input id={inputId} type="checkbox" className="otsukimi-checkbox-input" {...props} />
+      <input
+        id={inputId}
+        type="checkbox"
+        className="otsukimi-checkbox-input otsukimi-visually-hidden"
+        {...props}
+      />
       <label htmlFor={inputId} className="otsukimi-checkbox-box" aria-hidden="true">
         <Icon className="otsukimi-checkbox-icon" />
       </label>

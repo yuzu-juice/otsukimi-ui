@@ -32,7 +32,7 @@ const icons = [
 ] satisfies Array<{ name: string; Component: ComponentType<IconProps> }>;
 
 const meta = {
-  title: "Icons",
+  title: "Icons/Gallery",
   parameters: {
     layout: "centered",
   },
@@ -42,7 +42,7 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Gallery: Story = {
+export const Default: Story = {
   render: () => (
     <div
       style={{
@@ -71,50 +71,3 @@ export const Gallery: Story = {
     </div>
   ),
 };
-
-function IconShowcase({ Component, name }: { Component: ComponentType<IconProps>; name: string }) {
-  return (
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 16 }}>
-      <Component
-        title={name}
-        style={{
-          width: 64,
-          height: 64,
-          color: "var(--otsukimi-color-brand-primary-deep)",
-        }}
-      />
-      <div style={{ fontSize: 14, color: "var(--otsukimi-color-text-secondary)" }}>{name}</div>
-    </div>
-  );
-}
-
-export const ArrowDown: Story = {
-  render: () => <IconShowcase Component={ArrowDownIcon} name="ArrowDownIcon" />,
-};
-export const ArrowLeft: Story = {
-  render: () => <IconShowcase Component={ArrowLeftIcon} name="ArrowLeftIcon" />,
-};
-export const ArrowRight: Story = {
-  render: () => <IconShowcase Component={ArrowRightIcon} name="ArrowRightIcon" />,
-};
-export const ArrowUp: Story = {
-  render: () => <IconShowcase Component={ArrowUpIcon} name="ArrowUpIcon" />,
-};
-export const ChevronDown: Story = {
-  render: () => <IconShowcase Component={ChevronDownIcon} name="ChevronDownIcon" />,
-};
-export const ChevronLeft: Story = {
-  render: () => <IconShowcase Component={ChevronLeftIcon} name="ChevronLeftIcon" />,
-};
-export const ChevronRight: Story = {
-  render: () => <IconShowcase Component={ChevronRightIcon} name="ChevronRightIcon" />,
-};
-export const ChevronUp: Story = {
-  render: () => <IconShowcase Component={ChevronUpIcon} name="ChevronUpIcon" />,
-};
-export const Dot: Story = { render: () => <IconShowcase Component={DotIcon} name="DotIcon" /> };
-export const Moon: Story = { render: () => <IconShowcase Component={MoonIcon} name="MoonIcon" /> };
-export const Sparkle: Story = {
-  render: () => <IconShowcase Component={SparkleIcon} name="SparkleIcon" />,
-};
-export const Star: Story = { render: () => <IconShowcase Component={StarIcon} name="StarIcon" /> };

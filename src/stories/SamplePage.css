@@ -48,8 +48,6 @@
 }
 
 .sample-card {
-  box-sizing: border-box;
-
   width: 100%;
   max-width: none;
 }
@@ -75,10 +73,14 @@
   flex-direction: column;
 }
 
-.task-card .otsukimi-search-bar {
+.task-card .otsukimi-search-bar,
+.state-card .otsukimi-input,
+.faq-card .otsukimi-accordion {
   width: 100%;
   max-width: none;
+}
 
+.task-card .otsukimi-search-bar {
   margin-bottom: 16px;
 }
 
@@ -143,11 +145,6 @@
   gap: 12px;
 }
 
-.state-card .otsukimi-input {
-  width: 100%;
-  max-width: none;
-}
-
 .faq-card {
   margin-top: 39px;
 
@@ -158,11 +155,6 @@
   gap: 16px;
 
   max-width: 560px;
-}
-
-.faq-card .otsukimi-accordion {
-  width: 100%;
-  max-width: none;
 }
 
 @media (max-width: 1400px) {

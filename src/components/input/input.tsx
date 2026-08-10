@@ -5,5 +5,5 @@ import "./input.css";
 type InputProps = InputHTMLAttributes<HTMLInputElement>;
 
 export function Input({ className, ...props }: InputProps) {
-  return <input className={cx("otsukimi-input", className)} {...props} />;
+  return <input className={cx("otsukimi-input", "otsukimi-field", className)} {...props} />;
 }

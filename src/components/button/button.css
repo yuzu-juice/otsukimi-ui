@@ -64,10 +64,6 @@
   box-shadow: var(--otsukimi-shadow-sm);
 }
 
-.otsukimi-button-moon {
-  gap: 5px;
-}
-
 .otsukimi-button svg {
   width: 24px;
   height: 24px;

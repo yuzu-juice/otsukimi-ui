@@ -1,5 +1,6 @@
 import { useState, type FormHTMLAttributes, type InputHTMLAttributes } from "react";
 import { cx } from "../../lib/cx";
+import { Button } from "../button";
 import "./search-bar.css";
 
 type SearchBarProps = Omit<FormHTMLAttributes<HTMLFormElement>, "onSubmit" | "onChange"> & {
@@ -44,16 +45,16 @@ export function SearchBar({
     >
       <input
         type="search"
-        className="otsukimi-search-bar-input"
+        className="otsukimi-search-bar-input otsukimi-field"
         placeholder={placeholder}
         aria-label={searchLabel}
         {...inputProps}
         value={current}
         onChange={(e) => handleChange(e.target.value)}
       />
-      <button type="submit" className="otsukimi-search-bar-button">
+      <Button type="submit" className="otsukimi-search-bar-button">
         {buttonLabel}
-      </button>
+      </Button>
     </form>
   );
 }

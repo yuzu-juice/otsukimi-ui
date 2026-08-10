@@ -39,3 +39,22 @@
 
   --otsukimi-shadow-lg: 0 16px 48px rgb(221 183 244 / 20%), 0 4px 16px rgb(0 0 0 / 6%);
 }
+
+.otsukimi-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
+}
+
+.otsukimi-field:focus-visible {
+  outline: none;
+  border: 2px solid var(--otsukimi-color-brand-primary-deep);
+  box-shadow: var(--otsukimi-shadow-sm);
+  padding: 0 0.9375em;
+}

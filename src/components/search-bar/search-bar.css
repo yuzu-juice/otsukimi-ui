@@ -36,62 +36,14 @@
   color: var(--otsukimi-color-text-secondary);
 }
 
-.otsukimi-search-bar-input:focus-visible {
-  outline: none;
-  border: 2px solid var(--otsukimi-color-brand-primary-deep);
-  box-shadow: var(--otsukimi-shadow-sm);
-  padding: 0 0.9375em;
-}
-
 .otsukimi-search-bar-button {
   width: 84px;
-  height: 3em;
-  box-sizing: border-box;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+  min-width: 0;
   padding: 0.75em 1.25em;
-
-  border: 1px solid var(--otsukimi-color-border-default);
-  border-radius: var(--otsukimi-radius-full);
-
-  font-family: var(--otsukimi-font-body-family);
-  font-size: 1rem;
-  font-weight: 700;
-
-  color: var(--otsukimi-color-text-primary);
-
-  background: linear-gradient(
-    90deg,
-    var(--otsukimi-color-brand-primary-soft),
-    var(--otsukimi-color-secondary),
-    var(--otsukimi-color-accent-soft)
-  );
-
-  box-shadow: var(--otsukimi-shadow-md);
-
-  cursor: pointer;
-
-  transition:
-    transform 0.15s ease,
-    box-shadow 0.15s ease;
-}
-
-.otsukimi-search-bar-button:hover {
-  box-shadow: var(--otsukimi-shadow-lg);
-  transform: translateY(-1px);
-}
-
-.otsukimi-search-bar-button:focus-visible {
-  outline: 2px solid var(--otsukimi-color-brand-primary-deep);
-  outline-offset: 2px;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .otsukimi-search-bar-input,
-  .otsukimi-search-bar-button {
+  .otsukimi-search-bar-input {
     transition: none;
   }
 }

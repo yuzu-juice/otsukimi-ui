@@ -12,7 +12,12 @@ export function RadioButton({ label, className, id, ...props }: RadioButtonProps
 
   return (
     <span className={cx("otsukimi-radio-button", className)}>
-      <input id={inputId} type="radio" className="otsukimi-radio-input" {...props} />
+      <input
+        id={inputId}
+        type="radio"
+        className="otsukimi-radio-input otsukimi-visually-hidden"
+        {...props}
+      />
       <label htmlFor={inputId} className="otsukimi-radio-circle" aria-hidden="true">
         <span className="otsukimi-radio-dot" />
       </label>

@@ -14,18 +14,6 @@
   cursor: pointer;
 }
 
-.otsukimi-radio-input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip-path: inset(50%);
-  border: 0;
-  white-space: nowrap;
-}
-
 .otsukimi-radio-circle {
   width: 1.5em;
   height: 1.5em;
