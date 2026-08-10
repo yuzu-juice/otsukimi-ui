@@ -12,8 +12,8 @@
   background: repeating-linear-gradient(
     to right,
     var(--otsukimi-color-border-default) 0,
-    var(--otsukimi-color-border-default) 4px,
-    transparent 4px,
-    transparent 8px
+    var(--otsukimi-color-border-default) 0.125em,
+    transparent 0.125em,
+    transparent 0.25em
   );
 }

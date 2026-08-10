@@ -1,16 +1,16 @@
 .otsukimi-button {
   height: 3em;
   min-width: 10em;
-  padding: 0 1.75em;
+  padding: 0 1.25em;
   box-sizing: border-box;
 
   border-radius: var(--otsukimi-radius-full);
-  border: none;
+  border: 2px solid transparent;
 
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 0.625em;
 
   font-family: var(--otsukimi-font-body-family);
   font-size: 1rem;
@@ -44,8 +44,8 @@
 }
 
 .otsukimi-button:focus-visible {
-  outline: 2px solid var(--otsukimi-color-brand-primary-deep);
-  outline-offset: 2px;
+  outline: none;
+  border-color: var(--otsukimi-color-brand-primary-deep);
 }
 
 .otsukimi-button:disabled {
@@ -70,6 +70,10 @@
 
 .otsukimi-button-moon svg {
   color: var(--otsukimi-color-highlight-default);
+}
+
+.otsukimi-button-moon {
+  gap: 0.3125em;
 }
 
 @media (prefers-reduced-motion: reduce) {

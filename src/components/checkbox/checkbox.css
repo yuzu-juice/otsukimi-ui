@@ -62,6 +62,11 @@
   color: var(--otsukimi-color-highlight-default);
 }
 
+.otsukimi-checkbox-moon .otsukimi-checkbox-icon {
+  width: 1.375em;
+  height: 1.25em;
+}
+
 .otsukimi-checkbox-label {
   line-height: 1;
   cursor: pointer;

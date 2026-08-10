@@ -11,18 +11,9 @@
 
   color: var(--otsukimi-color-brand-primary-deep);
 
-  text-decoration: underline;
-  text-decoration-color: var(--otsukimi-color-brand-primary);
-  text-underline-offset: 4px;
+  text-decoration: none;
 
   cursor: pointer;
-
-  transition: text-decoration-color 0.15s ease;
-}
-
-.otsukimi-link:hover,
-.otsukimi-link:focus-visible {
-  text-decoration-color: var(--otsukimi-color-brand-primary-deep);
 }
 
 .otsukimi-link:focus-visible {

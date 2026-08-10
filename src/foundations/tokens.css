@@ -56,5 +56,4 @@
   outline: none;
   border: 2px solid var(--otsukimi-color-brand-primary-deep);
   box-shadow: var(--otsukimi-shadow-sm);
-  padding: 0 0.9375em;
 }
