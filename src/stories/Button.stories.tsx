@@ -1,5 +1,11 @@
+import type { CSSProperties } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from "../components/button";
+
+const focusRing: CSSProperties = {
+  outline: "2px solid var(--otsukimi-color-brand-primary-deep)",
+  outlineOffset: "2px",
+};
 
 const meta = {
   title: "Components/Button",
@@ -40,15 +46,14 @@ export const Disabled: Story = {
   },
 };
 
-export const Focused: Story = {
+export const Focus: Story = {
+  render: () => <Button style={focusRing}>フォーカス中</Button>,
+};
+
+export const MoonFocus: Story = {
   render: () => (
-    <Button
-      style={{
-        outline: "2px solid var(--otsukimi-color-brand-primary-deep)",
-        outlineOffset: "2px",
-      }}
-    >
-      フォーカス中
+    <Button variant="moon" style={focusRing}>
+      ムーンフォーカス中
     </Button>
   ),
 };
