@@ -103,7 +103,6 @@ function SamplePage() {
 
           <Checkbox label="メール通知" defaultChecked />
           <Checkbox label="プッシュ通知" />
-          <Checkbox label="郵便通知" defaultChecked />
         </Card>
       </section>
 
