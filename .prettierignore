@@ -2,5 +2,5 @@ dist
 node_modules
 pnpm-lock.yaml
 CHANGELOG.md
-.opencode
-.superpowers
+.opencode/plans
+.superpowers/sdd
