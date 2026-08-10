@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.1.1](https://github.com/yuzu-juice/otsukimi-ui/compare/otsukimi-ui-v1.1.0...otsukimi-ui-v1.1.1) (2026-08-10)
+
+
+### Bug Fixes
+
+* Clarify PR title and release flow instructions ([51ec35c](https://github.com/yuzu-juice/otsukimi-ui/commit/51ec35c978c3824c75448d9590035409d7fbc473))
+* Clarify PR title and release flow instructions ([#41](https://github.com/yuzu-juice/otsukimi-ui/issues/41)) ([1e57a70](https://github.com/yuzu-juice/otsukimi-ui/commit/1e57a7040d92dc2997ba0bd6e62b34a53c513a4d))
+* Remove status section from README ([633f706](https://github.com/yuzu-juice/otsukimi-ui/commit/633f706bcf113af1ec135ad0329abfb640024100))
+* Remove status section from README ([#39](https://github.com/yuzu-juice/otsukimi-ui/issues/39)) ([196c62e](https://github.com/yuzu-juice/otsukimi-ui/commit/196c62e5eca8a6cfdc544447790a7475d9c98abf))
+
 ## [1.1.0](https://github.com/yuzu-juice/otsukimi-ui/compare/otsukimi-ui-v1.0.2...otsukimi-ui-v1.1.0) (2026-08-10)
 
 
