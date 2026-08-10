@@ -6,7 +6,7 @@
   gap: 5px;
 
   font-family: var(--otsukimi-font-body-family);
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
 
   color: var(--otsukimi-color-brand-primary-deep);

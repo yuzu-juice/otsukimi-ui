@@ -19,7 +19,7 @@
   margin: 0;
 
   font-family: var(--otsukimi-font-heading-family);
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 
@@ -49,7 +49,6 @@
 
 .sample-card {
   box-sizing: border-box;
-  padding: 24px;
 
   width: 100%;
   max-width: none;
@@ -59,7 +58,7 @@
   margin: 0 0 24px;
 
   font-family: var(--otsukimi-font-heading-family);
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
@@ -67,8 +66,13 @@
   margin: 24px 0 16px;
 
   font-family: var(--otsukimi-font-heading-family);
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 500;
+}
+
+.task-card {
+  display: flex;
+  flex-direction: column;
 }
 
 .task-card .otsukimi-search-bar {
@@ -96,6 +100,7 @@
 
 .feature-item {
   height: 65px;
+  width: 100%;
 
   display: flex;
   align-items: center;
@@ -104,16 +109,16 @@
   margin-bottom: 21px;
 
   padding: 0 26px;
-
-  border-radius: var(--otsukimi-radius-md);
-
-  box-shadow: var(--otsukimi-shadow-md);
-
-  background: var(--otsukimi-color-bg-surface);
 }
 
 .feature-item:last-child {
   margin-bottom: 0;
+}
+
+.setting-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .sample-page-states {

@@ -84,10 +84,10 @@ function SamplePage() {
               ["ぺ", "サンプルページ", "accent-soft"],
             ] as const
           ).map(([badge, text, variant]) => (
-            <div className="feature-item" key={text}>
+            <Card className="feature-item" key={text}>
               <Badge variant={variant}>{badge}</Badge>
               <span>{text}</span>
-            </div>
+            </Card>
           ))}
         </Card>
 
