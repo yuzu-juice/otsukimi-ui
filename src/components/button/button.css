@@ -5,7 +5,7 @@
   box-sizing: border-box;
 
   border-radius: var(--otsukimi-radius-full);
-  border: 1px solid var(--otsukimi-color-border-default);
+  border: none;
 
   display: inline-flex;
   align-items: center;
@@ -50,7 +50,6 @@
 
 .otsukimi-button:disabled {
   background: var(--otsukimi-color-border-default);
-  border-color: var(--otsukimi-color-border-default);
   color: var(--otsukimi-color-text-secondary);
   box-shadow: var(--otsukimi-shadow-sm);
   cursor: not-allowed;
