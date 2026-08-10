@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/yuzu-juice/otsukimi-ui/compare/otsukimi-ui-v1.0.2...otsukimi-ui-v1.1.0) (2026-08-10)
+
+
+### Features
+
+* auto-inject component styles on import ([2bd3146](https://github.com/yuzu-juice/otsukimi-ui/commit/2bd3146488257cc2f5893fc118958966521284d1))
+* auto-inject component styles, add components user manual ([#37](https://github.com/yuzu-juice/otsukimi-ui/issues/37)) ([df58506](https://github.com/yuzu-juice/otsukimi-ui/commit/df58506286660df05522c4ffe02df86662556159))
+
 ## [1.0.2](https://github.com/yuzu-juice/otsukimi-ui/compare/otsukimi-ui-v1.0.1...otsukimi-ui-v1.0.2) (2026-08-10)
 
 
