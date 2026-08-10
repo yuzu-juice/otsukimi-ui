@@ -3,8 +3,10 @@
   align-items: center;
   gap: 13px;
 
-  font-family: "LINE Seed JP", sans-serif;
-  font-size: 16px;
+  position: relative;
+
+  font-family: var(--otsukimi-font-body-family);
+  font-size: 1rem;
   font-weight: 400;
 
   color: var(--otsukimi-color-text-primary);
@@ -13,8 +15,8 @@
 }
 
 .otsukimi-radio-circle {
-  width: 24px;
-  height: 24px;
+  width: 1.5em;
+  height: 1.5em;
   box-sizing: border-box;
 
   display: flex;
@@ -25,21 +27,48 @@
 
   background: var(--otsukimi-color-bg-surface);
   border: 2px solid var(--otsukimi-color-border-default);
+
+  transition: border-color 0.15s ease;
 }
 
-.otsukimi-radio-checked {
+.otsukimi-radio-input:checked + .otsukimi-radio-circle {
   border-color: var(--otsukimi-color-brand-primary-deep);
 }
 
+.otsukimi-radio-input:focus-visible + .otsukimi-radio-circle {
+  outline: 2px solid var(--otsukimi-color-brand-primary-deep);
+  outline-offset: 2px;
+}
+
+.otsukimi-radio-input:disabled + .otsukimi-radio-circle {
+  opacity: 0.5;
+}
+
+.otsukimi-radio-button:has(.otsukimi-radio-input:disabled) {
+  cursor: not-allowed;
+}
+
 .otsukimi-radio-dot {
-  width: 16px;
-  height: 16px;
+  width: 1em;
+  height: 1em;
 
   border-radius: 50%;
 
   background: var(--otsukimi-color-brand-primary-deep);
+  display: none;
+}
+
+.otsukimi-radio-input:checked + .otsukimi-radio-circle .otsukimi-radio-dot {
+  display: block;
 }
 
 .otsukimi-radio-label {
   line-height: 1;
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .otsukimi-radio-circle {
+    transition: none;
+  }
 }

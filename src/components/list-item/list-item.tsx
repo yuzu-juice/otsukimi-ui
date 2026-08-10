@@ -1,12 +1,13 @@
+import type { ReactNode } from "react";
 import { StarIcon, DotIcon } from "../../icons";
 import "./list-item.css";
 
 type ListItemProps = {
   variant?: "star" | "dot";
-  children?: string;
+  children?: ReactNode;
 };
 
-export function ListItem({ variant = "star", children = "生命" }: ListItemProps) {
+export function ListItem({ variant = "star", children }: ListItemProps) {
   return (
     <div className={`otsukimi-list-item otsukimi-list-item-${variant}`}>
       {variant === "star" ? <StarIcon /> : <DotIcon />}

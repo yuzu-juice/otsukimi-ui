@@ -7,11 +7,6 @@ const meta = {
   parameters: {
     layout: "centered",
   },
-  argTypes: {
-    state: {
-      control: false,
-    },
-  },
 } satisfies Meta<typeof Checkbox>;
 
 export default meta;
@@ -20,18 +15,21 @@ type Story = StoryObj<typeof meta>;
 
 export const Unchecked: Story = {
   args: {
-    state: "unchecked",
+    label: "チェックしていない",
   },
 };
 
 export const StarChecked: Story = {
   args: {
-    state: "star-checked",
+    defaultChecked: true,
+    label: "チェックしている",
   },
 };
 
 export const MoonChecked: Story = {
   args: {
-    state: "moon-checked",
+    variant: "moon",
+    defaultChecked: true,
+    label: "チェックしている",
   },
 };

@@ -1,26 +1,34 @@
+import { useId, type InputHTMLAttributes } from "react";
 import { StarIcon, MoonIcon } from "../../icons";
+import { cx } from "../../lib/cx";
 import "./checkbox.css";
 
-type CheckboxProps = {
-  state?: "unchecked" | "star-checked" | "moon-checked";
+type CheckboxProps = Omit<InputHTMLAttributes<HTMLInputElement>, "type"> & {
+  variant?: "star" | "moon";
   label?: string;
 };
 
-export function Checkbox({ state = "unchecked", label }: CheckboxProps) {
-  const checked = state !== "unchecked";
-
-  const defaultLabel = state === "unchecked" ? "チェックしていない" : "チェックしている";
+export function Checkbox({ variant = "star", label, className, id, ...props }: CheckboxProps) {
+  const generatedId = useId();
+  const inputId = id ?? generatedId;
+  const Icon = variant === "star" ? StarIcon : MoonIcon;
 
   return (
-    <label className="otsukimi-checkbox">
-      <span className={`otsukimi-checkbox-box otsukimi-checkbox-${state}`} aria-hidden="true">
-        {state === "star-checked" && <StarIcon />}
-        {state === "moon-checked" && <MoonIcon />}
-      </span>
-
-      <span className="otsukimi-checkbox-label">{label ?? defaultLabel}</span>
-
-      <input type="checkbox" checked={checked} readOnly hidden />
-    </label>
+    <span className={cx("otsukimi-checkbox", `otsukimi-checkbox-${variant}`, className)}>
+      <input
+        id={inputId}
+        type="checkbox"
+        className="otsukimi-checkbox-input otsukimi-visually-hidden"
+        {...props}
+      />
+      <label htmlFor={inputId} className="otsukimi-checkbox-box" aria-hidden="true">
+        <Icon className="otsukimi-checkbox-icon" />
+      </label>
+      {label && (
+        <label htmlFor={inputId} className="otsukimi-checkbox-label">
+          {label}
+        </label>
+      )}
+    </span>
   );
 }

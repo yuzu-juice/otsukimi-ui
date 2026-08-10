@@ -1,14 +1,60 @@
-import type { HTMLAttributes } from "react";
+import { useState, type FormHTMLAttributes, type InputHTMLAttributes } from "react";
+import { cx } from "../../lib/cx";
+import { Button } from "../button";
 import "./search-bar.css";
 
-type SearchBarProps = HTMLAttributes<HTMLDivElement>;
+type SearchBarProps = Omit<FormHTMLAttributes<HTMLFormElement>, "onSubmit" | "onChange"> & {
+  placeholder?: string;
+  value?: string;
+  defaultValue?: string;
+  onChange?: (value: string) => void;
+  onSearch?: (value: string) => void;
+  buttonLabel?: string;
+  searchLabel?: string;
+  inputProps?: InputHTMLAttributes<HTMLInputElement>;
+};
 
-export function SearchBar(props: SearchBarProps) {
+export function SearchBar({
+  placeholder,
+  value,
+  defaultValue,
+  onChange,
+  onSearch,
+  buttonLabel,
+  searchLabel,
+  className,
+  inputProps,
+  ...props
+}: SearchBarProps) {
+  const [internal, setInternal] = useState(defaultValue);
+  const current = (value !== undefined ? value : internal) ?? "";
+
+  const handleChange = (next: string) => {
+    if (value === undefined) setInternal(next);
+    onChange?.(next);
+  };
+
   return (
-    <div className="otsukimi-search-bar" {...props}>
-      <div className="otsukimi-search-bar-input">検索したいことを入力するよ</div>
-
-      <button className="otsukimi-search-bar-button">検索</button>
-    </div>
+    <form
+      className={cx("otsukimi-search-bar", className)}
+      onSubmit={(e) => {
+        e.preventDefault();
+        onSearch?.(current.trim());
+      }}
+      {...props}
+    >
+      <input
+        type="search"
+        className="otsukimi-search-bar-input otsukimi-field"
+        placeholder={placeholder}
+        aria-label={searchLabel}
+        {...inputProps}
+        value={current}
+        onChange={(e) => handleChange(e.target.value)}
+      />
+      <Button type="submit" className="otsukimi-search-bar-button">
+        {buttonLabel}
+      </Button>
+    </form>
   );
 }

@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap");
+
+.sample-page {
+  min-height: 100vh;
+  padding: 37px 64px;
+  box-sizing: border-box;
+
+  max-width: 1388px;
+  margin: 0 auto;
+
+  background: var(--otsukimi-color-bg-base);
+
+  color: var(--otsukimi-color-text-primary);
+
+  font-family: var(--otsukimi-font-body-family);
+}
+
+.sample-page-header h1 {
+  margin: 0;
+
+  font-family: var(--otsukimi-font-heading-family);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.sample-page-messages {
+  display: flex;
+  gap: 16px;
+
+  margin-top: 32px;
+}
+
+.sample-page-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  margin-top: 24px;
+}
+
+.sample-page-grid {
+  display: grid;
+
+  grid-template-columns: 469px 469px 244px;
+  gap: 39px;
+
+  margin-top: 24px;
+}
+
+.sample-card {
+  width: 100%;
+  max-width: none;
+}
+
+.sample-card h2 {
+  margin: 0 0 24px;
+
+  font-family: var(--otsukimi-font-heading-family);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.sample-card h3 {
+  margin: 24px 0 16px;
+
+  font-family: var(--otsukimi-font-heading-family);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.task-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-card .otsukimi-search-bar,
+.state-card .otsukimi-input,
+.faq-card .otsukimi-accordion {
+  width: 100%;
+  max-width: none;
+}
+
+.task-card .otsukimi-search-bar {
+  margin-bottom: 16px;
+}
+
+.task-card .otsukimi-divider {
+  width: 100%;
+}
+
+.task-card .otsukimi-link {
+  margin-top: auto;
+}
+
+.task-list > div:not(.otsukimi-divider) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 48px;
+}
+
+.feature-item {
+  height: 65px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  margin-bottom: 21px;
+
+  padding: 0 26px;
+}
+
+.feature-item:last-child {
+  margin-bottom: 0;
+}
+
+.setting-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sample-page-states {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 39px;
+
+  margin-top: 39px;
+}
+
+.state-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.state-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-card {
+  margin-top: 39px;
+
+  min-height: 215px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  max-width: 560px;
+}
+
+@media (max-width: 1400px) {
+  .sample-page {
+    padding: 37px 32px;
+  }
+
+  .sample-page-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}

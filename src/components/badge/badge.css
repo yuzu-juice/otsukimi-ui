@@ -7,8 +7,8 @@
 
   border-radius: var(--otsukimi-radius-full);
 
-  font-family: "LINE Seed JP", sans-serif;
-  font-size: 13px;
+  font-family: var(--otsukimi-font-body-family);
+  font-size: 0.8125rem;
   font-weight: 400;
 
   color: var(--otsukimi-color-text-primary);

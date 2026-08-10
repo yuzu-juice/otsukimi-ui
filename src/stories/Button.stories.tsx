@@ -1,16 +1,17 @@
+import type { CSSProperties } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from "../components/button";
+
+const focusRing: CSSProperties = {
+  outline: "2px solid var(--otsukimi-color-brand-primary-deep)",
+  outlineOffset: "2px",
+};
 
 const meta = {
   title: "Components/Button",
   component: Button,
   parameters: {
     layout: "centered",
-  },
-  argTypes: {
-    state: {
-      control: false,
-    },
   },
 } satisfies Meta<typeof Button>;
 
@@ -20,42 +21,39 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    state: "default",
-    children: "ボタン",
-  },
-};
-
-export const Focus: Story = {
-  args: {
-    state: "focus",
-    children: "ボタン",
-  },
-};
-
-export const Disabled: Story = {
-  args: {
-    state: "disabled",
-    children: "ボタン",
-  },
-};
-
-export const Transparent: Story = {
-  args: {
-    state: "transparent",
     children: "ボタン",
   },
 };
 
 export const Moon: Story = {
   args: {
-    state: "moon",
-    children: "ボタン",
+    variant: "moon",
+    children: "ムーン",
   },
 };
 
-export const MoonFocus: Story = {
+export const Transparent: Story = {
   args: {
-    state: "moon-focus",
-    children: "ボタン",
+    variant: "transparent",
+    children: "透明",
   },
+};
+
+export const Disabled: Story = {
+  args: {
+    disabled: true,
+    children: "無効",
+  },
+};
+
+export const Focus: Story = {
+  render: () => <Button style={focusRing}>フォーカス中</Button>,
+};
+
+export const MoonFocus: Story = {
+  render: () => (
+    <Button variant="moon" style={focusRing}>
+      ムーンフォーカス中
+    </Button>
+  ),
 };

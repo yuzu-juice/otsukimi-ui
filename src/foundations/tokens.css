@@ -3,11 +3,11 @@
   --otsukimi-color-bg-surface: #ffffff;
   --otsukimi-color-brand-primary: #dca3ff;
   --otsukimi-color-brand-primary-soft: #efd6ff;
-  --otsukimi-color-brand-primary-deep: #7b8cff;
+  --otsukimi-color-brand-primary-deep: #5560c9;
   --otsukimi-color-accent-default: #8edaf7;
   --otsukimi-color-accent-soft: #cdefff;
   --otsukimi-color-text-primary: #483354;
-  --otsukimi-color-text-secondary: #7a7691;
+  --otsukimi-color-text-secondary: #6f6a86;
   --otsukimi-color-border-default: #e8dcf3;
   --otsukimi-color-highlight-default: #ffbc00;
   --otsukimi-color-highlight-soft: #fff3c7;
@@ -26,9 +26,35 @@
   --otsukimi-spacing-5: 32px;
   --otsukimi-spacing-6: 64px;
 
+  --otsukimi-font-body-family:
+    "LINE Seed JP", "Zen Maru Gothic", "Hiragino Kaku Gothic ProN", "Noto Sans JP", system-ui,
+    sans-serif;
+  --otsukimi-font-heading-family:
+    "Zen Maru Gothic", "LINE Seed JP", "Hiragino Kaku Gothic ProN", "Noto Sans JP", system-ui,
+    sans-serif;
+
   --otsukimi-shadow-sm: 0 4px 8px rgb(221 183 244 / 10%), 0 2px 4px rgb(0 0 0 / 3%);
 
   --otsukimi-shadow-md: 0 8px 24px rgb(221 183 244 / 15%), 0 2px 8px rgb(0 0 0 / 5%);
 
   --otsukimi-shadow-lg: 0 16px 48px rgb(221 183 244 / 20%), 0 4px 16px rgb(0 0 0 / 6%);
+}
+
+.otsukimi-visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
+}
+
+.otsukimi-field:focus-visible {
+  outline: none;
+  border: 2px solid var(--otsukimi-color-brand-primary-deep);
+  box-shadow: var(--otsukimi-shadow-sm);
+  padding: 0 0.9375em;
 }

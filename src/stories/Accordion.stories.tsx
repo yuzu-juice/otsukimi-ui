@@ -7,11 +7,6 @@ const meta = {
   parameters: {
     layout: "centered",
   },
-  argTypes: {
-    open: {
-      control: false,
-    },
-  },
 } satisfies Meta<typeof Accordion>;
 
 export default meta;
@@ -34,8 +29,6 @@ export const Open: Story = {
         これは、よくある質問です。
         <br />
         よくある質問というのは、頻繁に問い合わせがあるということになります。
-        <br />
-        つまり、ここに書いてあることはよく質問を受ける事項となっております。
       </>
     ),
   },

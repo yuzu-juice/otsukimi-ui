@@ -1,12 +1,35 @@
+import type { ComponentType } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { MoonIcon, StarIcon, ChevronDownIcon, ChevronUpIcon } from "../icons";
+import {
+  ArrowDownIcon,
+  ArrowLeftIcon,
+  ArrowRightIcon,
+  ArrowUpIcon,
+  ChevronDownIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  ChevronUpIcon,
+  DotIcon,
+  MoonIcon,
+  SparkleIcon,
+  StarIcon,
+  type IconProps,
+} from "../icons";
 
 const icons = [
-  { name: "MoonIcon", Component: MoonIcon },
-  { name: "StarIcon", Component: StarIcon },
+  { name: "ArrowDownIcon", Component: ArrowDownIcon },
+  { name: "ArrowLeftIcon", Component: ArrowLeftIcon },
+  { name: "ArrowRightIcon", Component: ArrowRightIcon },
+  { name: "ArrowUpIcon", Component: ArrowUpIcon },
   { name: "ChevronDownIcon", Component: ChevronDownIcon },
+  { name: "ChevronLeftIcon", Component: ChevronLeftIcon },
+  { name: "ChevronRightIcon", Component: ChevronRightIcon },
   { name: "ChevronUpIcon", Component: ChevronUpIcon },
-];
+  { name: "DotIcon", Component: DotIcon },
+  { name: "MoonIcon", Component: MoonIcon },
+  { name: "SparkleIcon", Component: SparkleIcon },
+  { name: "StarIcon", Component: StarIcon },
+] satisfies Array<{ name: string; Component: ComponentType<IconProps> }>;
 
 const meta = {
   title: "Icons/Gallery",
@@ -24,7 +47,7 @@ export const Default: Story = {
     <div
       style={{
         display: "grid",
-        gridTemplateColumns: "repeat(4, 100px)",
+        gridTemplateColumns: "repeat(4, 120px)",
         gap: 24,
         textAlign: "center",
       }}
@@ -35,10 +58,14 @@ export const Default: Story = {
             style={{
               width: 32,
               height: 32,
-              color: "var(--otsukimi-color-brand-primary)",
+              color: "var(--otsukimi-color-brand-primary-deep)",
             }}
           />
-          <div style={{ marginTop: 8, fontSize: 12 }}>{name}</div>
+          <div
+            style={{ marginTop: 8, fontSize: 12, color: "var(--otsukimi-color-text-secondary)" }}
+          >
+            {name}
+          </div>
         </div>
       ))}
     </div>
