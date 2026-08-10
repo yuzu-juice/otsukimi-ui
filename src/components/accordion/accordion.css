@@ -36,7 +36,7 @@
   box-shadow: var(--otsukimi-shadow-sm);
 }
 
-.otsukimi-accordion-header:focus-visible {
+.otsukimi-accordion-header:focus {
   outline: 2px solid var(--otsukimi-color-brand-primary-deep);
   outline-offset: 2px;
 }

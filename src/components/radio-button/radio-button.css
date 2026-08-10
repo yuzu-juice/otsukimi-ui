@@ -47,7 +47,7 @@
   border-color: var(--otsukimi-color-brand-primary-deep);
 }
 
-.otsukimi-radio-input:focus-visible + .otsukimi-radio-circle {
+.otsukimi-radio-input:focus + .otsukimi-radio-circle {
   outline: 2px solid var(--otsukimi-color-brand-primary-deep);
   outline-offset: 2px;
 }

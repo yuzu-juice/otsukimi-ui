@@ -21,11 +21,11 @@
 }
 
 .otsukimi-link:hover,
-.otsukimi-link:focus-visible {
+.otsukimi-link:focus {
   text-decoration-color: var(--otsukimi-color-brand-primary-deep);
 }
 
-.otsukimi-link:focus-visible {
+.otsukimi-link:focus {
   outline: 2px solid var(--otsukimi-color-brand-primary-deep);
   outline-offset: 2px;
 }

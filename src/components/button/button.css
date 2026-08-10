@@ -43,7 +43,7 @@
   transform: translateY(0);
 }
 
-.otsukimi-button:focus-visible {
+.otsukimi-button:focus {
   outline: 2px solid var(--otsukimi-color-brand-primary-deep);
   outline-offset: 2px;
 }
