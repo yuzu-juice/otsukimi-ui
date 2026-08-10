@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.0](https://github.com/yuzu-juice/otsukimi-ui/compare/otsukimi-ui-v0.3.0...otsukimi-ui-v1.0.0) (2026-08-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* make components interactive and accessible (breaking) ([#26](https://github.com/yuzu-juice/otsukimi-ui/issues/26))
+
+### Bug Fixes
+
+* make components interactive and accessible (breaking) ([#26](https://github.com/yuzu-juice/otsukimi-ui/issues/26)) ([32c4968](https://github.com/yuzu-juice/otsukimi-ui/commit/32c496861905b190a18b41a00a913bf62c55c530))
+
 ## [0.3.0](https://github.com/yuzu-juice/otsukimi-ui/compare/otsukimi-ui-v0.2.0...otsukimi-ui-v0.3.0) (2026-08-09)
 
 
