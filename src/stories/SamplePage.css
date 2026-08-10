@@ -71,10 +71,6 @@
   font-weight: 500;
 }
 
-.task-card {
-  height: 432px;
-}
-
 .task-card .otsukimi-search-bar {
   width: 100%;
   max-width: none;
@@ -118,10 +114,6 @@
 
 .feature-item:last-child {
   margin-bottom: 0;
-}
-
-.setting-card {
-  height: 432px;
 }
 
 .sample-page-states {
