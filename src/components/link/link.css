@@ -11,6 +11,8 @@
 
   color: var(--otsukimi-color-brand-primary-deep);
 
+  text-decoration: none;
+
   cursor: pointer;
 }
 
