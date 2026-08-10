@@ -11,7 +11,7 @@ import {
   RadioButton,
   SearchBar,
 } from "../index";
-import { MoonIcon, StarIcon } from "../icons";
+import { MoonIcon } from "../icons";
 import "./SamplePage.css";
 
 function SamplePage() {
