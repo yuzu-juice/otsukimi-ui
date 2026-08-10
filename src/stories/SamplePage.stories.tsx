@@ -26,9 +26,9 @@ function SamplePage() {
         </div>
 
         <div className="sample-page-actions">
-          <Button state="moon">Get started!</Button>
+          <Button variant="moon">Get started!</Button>
 
-          <Button state="transparent">See docs</Button>
+          <Button variant="transparent">See docs</Button>
         </div>
       </header>
 
@@ -36,7 +36,11 @@ function SamplePage() {
         <Card className="sample-card task-card">
           <h2>タスク一覧</h2>
 
-          <SearchBar />
+          <SearchBar
+            placeholder="タスクを検索するよ"
+            buttonLabel="検索"
+            searchLabel="タスクを検索"
+          />
 
           <div className="task-list">
             <div>
@@ -108,9 +112,9 @@ function SamplePage() {
 
           <div className="state-row">
             <Button>デフォルト</Button>
-            <Button state="moon">ムーン</Button>
-            <Button state="transparent">透明</Button>
-            <Button state="disabled">無効</Button>
+            <Button variant="moon">ムーン</Button>
+            <Button variant="transparent">透明</Button>
+            <Button disabled>無効</Button>
           </div>
         </Card>
 
@@ -119,8 +123,7 @@ function SamplePage() {
 
           <div className="state-col">
             <Input placeholder="デフォルト" />
-            <Input state="focus" placeholder="フォーカス中" />
-            <Input state="disabled" placeholder="無効" />
+            <Input placeholder="無効" disabled />
           </div>
         </Card>
 

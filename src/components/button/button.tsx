@@ -4,24 +4,20 @@ import { cx } from "../../lib/cx";
 import "./button.css";
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
-  state?: "default" | "focus" | "disabled" | "transparent" | "moon" | "moon-focus";
+  variant?: "default" | "moon" | "transparent";
 };
 
-export function Button({
-  state = "default",
-  children = "ボタン",
-  className,
-  ...props
-}: ButtonProps) {
-  const hasMoon = state === "moon" || state === "moon-focus";
-
+export function Button({ variant = "default", children, className, ...props }: ButtonProps) {
   return (
     <button
-      className={cx("otsukimi-button", `otsukimi-button-${state}`, className)}
-      disabled={state === "disabled" || props.disabled}
+      className={cx(
+        "otsukimi-button",
+        variant !== "default" && `otsukimi-button-${variant}`,
+        className
+      )}
       {...props}
     >
-      {hasMoon && <MoonIcon aria-hidden="true" />}
+      {variant === "moon" && <MoonIcon aria-hidden="true" />}
       {children}
     </button>
   );

@@ -33,13 +33,7 @@
   padding: 0 0.9375em;
 }
 
-.otsukimi-input-focus {
-  border: 2px solid var(--otsukimi-color-brand-primary-deep);
-  box-shadow: var(--otsukimi-shadow-sm);
-  padding: 0 0.9375em;
-}
-
-.otsukimi-input-disabled {
+.otsukimi-input:disabled {
   background: var(--otsukimi-color-bg-base);
   border: 1px solid var(--otsukimi-color-border-default);
   opacity: 0.8;

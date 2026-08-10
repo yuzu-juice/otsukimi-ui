@@ -7,11 +7,6 @@ const meta = {
   parameters: {
     layout: "centered",
   },
-  argTypes: {
-    state: {
-      control: false,
-    },
-  },
 } satisfies Meta<typeof Input>;
 
 export default meta;
@@ -20,18 +15,13 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    state: "default",
-  },
-};
-
-export const Focus: Story = {
-  args: {
-    state: "focus",
+    placeholder: "テキストを入力してね",
   },
 };
 
 export const Disabled: Story = {
   args: {
-    state: "disabled",
+    placeholder: "無効",
+    disabled: true,
   },
 };

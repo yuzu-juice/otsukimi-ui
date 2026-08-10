@@ -6,23 +6,18 @@ type RadioButtonProps = Omit<InputHTMLAttributes<HTMLInputElement>, "type"> & {
   label?: string;
 };
 
-export function RadioButton({ label, className, ...props }: RadioButtonProps) {
-  const id = useId();
+export function RadioButton({ label, className, id, ...props }: RadioButtonProps) {
+  const generatedId = useId();
+  const inputId = id ?? generatedId;
 
   return (
-    <span className="otsukimi-radio-button">
-      <input
-        id={id}
-        type="radio"
-        className={cx("otsukimi-radio-input", className)}
-        aria-label={label ? undefined : "radio button"}
-        {...props}
-      />
-      <label htmlFor={id} className="otsukimi-radio-circle" aria-hidden="true">
+    <span className={cx("otsukimi-radio-button", className)}>
+      <input id={inputId} type="radio" className="otsukimi-radio-input" {...props} />
+      <label htmlFor={inputId} className="otsukimi-radio-circle" aria-hidden="true">
         <span className="otsukimi-radio-dot" />
       </label>
       {label && (
-        <label htmlFor={id} className="otsukimi-radio-label">
+        <label htmlFor={inputId} className="otsukimi-radio-label">
           {label}
         </label>
       )}

@@ -8,24 +8,19 @@ type CheckboxProps = Omit<InputHTMLAttributes<HTMLInputElement>, "type"> & {
   label?: string;
 };
 
-export function Checkbox({ variant = "star", label, className, ...props }: CheckboxProps) {
-  const id = useId();
+export function Checkbox({ variant = "star", label, className, id, ...props }: CheckboxProps) {
+  const generatedId = useId();
+  const inputId = id ?? generatedId;
   const Icon = variant === "star" ? StarIcon : MoonIcon;
 
   return (
-    <span className={`otsukimi-checkbox otsukimi-checkbox-${variant}`}>
-      <input
-        id={id}
-        type="checkbox"
-        className={cx("otsukimi-checkbox-input", className)}
-        aria-label={label ? undefined : "checkbox"}
-        {...props}
-      />
-      <label htmlFor={id} className="otsukimi-checkbox-box" aria-hidden="true">
+    <span className={cx("otsukimi-checkbox", `otsukimi-checkbox-${variant}`, className)}>
+      <input id={inputId} type="checkbox" className="otsukimi-checkbox-input" {...props} />
+      <label htmlFor={inputId} className="otsukimi-checkbox-box" aria-hidden="true">
         <Icon className="otsukimi-checkbox-icon" />
       </label>
       {label && (
-        <label htmlFor={id} className="otsukimi-checkbox-label">
+        <label htmlFor={inputId} className="otsukimi-checkbox-label">
           {label}
         </label>
       )}

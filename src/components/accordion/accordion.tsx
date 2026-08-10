@@ -14,7 +14,7 @@ export function Accordion({
   open,
   defaultOpen = false,
   onToggle,
-  title = "よくある質問",
+  title,
   children,
   className,
   ...props
@@ -36,6 +36,7 @@ export function Accordion({
     >
       <button
         type="button"
+        id={`${id}-header`}
         className="otsukimi-accordion-header"
         aria-expanded={isOpen}
         aria-controls={`${id}-panel`}
@@ -45,11 +46,15 @@ export function Accordion({
         <span>{title}</span>
       </button>
 
-      {isOpen && (
-        <div id={`${id}-panel`} className="otsukimi-accordion-content">
-          {children}
-        </div>
-      )}
+      <div
+        id={`${id}-panel`}
+        role="region"
+        aria-labelledby={`${id}-header`}
+        className="otsukimi-accordion-content"
+        hidden={!isOpen}
+      >
+        {children}
+      </div>
     </div>
   );
 }

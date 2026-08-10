@@ -64,6 +64,10 @@
   color: var(--otsukimi-color-text-primary);
 }
 
+.otsukimi-accordion-content[hidden] {
+  display: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .otsukimi-accordion-header {
     transition: none;

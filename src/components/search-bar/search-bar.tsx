@@ -1,30 +1,35 @@
-import { useState, type FormHTMLAttributes } from "react";
+import { useState, type FormHTMLAttributes, type InputHTMLAttributes } from "react";
 import { cx } from "../../lib/cx";
 import "./search-bar.css";
 
 type SearchBarProps = Omit<FormHTMLAttributes<HTMLFormElement>, "onSubmit" | "onChange"> & {
   placeholder?: string;
+  value?: string;
   defaultValue?: string;
   onChange?: (value: string) => void;
   onSearch?: (value: string) => void;
   buttonLabel?: string;
   searchLabel?: string;
+  inputProps?: InputHTMLAttributes<HTMLInputElement>;
 };
 
 export function SearchBar({
-  placeholder = "検索したいことを入力するよ",
-  defaultValue = "",
+  placeholder,
+  value,
+  defaultValue,
   onChange,
   onSearch,
-  buttonLabel = "検索",
-  searchLabel = "検索",
+  buttonLabel,
+  searchLabel,
   className,
+  inputProps,
   ...props
 }: SearchBarProps) {
-  const [value, setValue] = useState(defaultValue);
+  const [internal, setInternal] = useState(defaultValue);
+  const current = (value !== undefined ? value : internal) ?? "";
 
   const handleChange = (next: string) => {
-    setValue(next);
+    if (value === undefined) setInternal(next);
     onChange?.(next);
   };
 
@@ -33,7 +38,7 @@ export function SearchBar({
       className={cx("otsukimi-search-bar", className)}
       onSubmit={(e) => {
         e.preventDefault();
-        onSearch?.(value.trim());
+        onSearch?.(current.trim());
       }}
       {...props}
     >
@@ -42,7 +47,8 @@ export function SearchBar({
         className="otsukimi-search-bar-input"
         placeholder={placeholder}
         aria-label={searchLabel}
-        value={value}
+        {...inputProps}
+        value={current}
         onChange={(e) => handleChange(e.target.value)}
       />
       <button type="submit" className="otsukimi-search-bar-button">
