@@ -1,0 +1,54 @@
+.sample-page {
+  min-height: 100svh;
+  padding: 64px 24px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+
+  background: var(--otsukimi-color-bg-base);
+
+  font-family: var(--otsukimi-font-body-family);
+}
+
+.sample-page-header {
+  text-align: center;
+
+  font-family: var(--otsukimi-font-heading-family);
+  color: var(--otsukimi-color-text-primary);
+}
+
+.sample-page-header h1 {
+  margin: 0 0 8px;
+
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.sample-page-header p {
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--otsukimi-color-text-secondary);
+}
+
+.sample-page-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 560px;
+}
+
+.sample-page-section .otsukimi-card {
+  max-width: 560px;
+}
+
+.sample-page-section .otsukimi-card h2 {
+  margin: 8px 0 0;
+  font-size: 20px;
+  font-weight: 700;
+}
