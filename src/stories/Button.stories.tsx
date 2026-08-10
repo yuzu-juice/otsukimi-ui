@@ -39,3 +39,16 @@ export const Disabled: Story = {
     children: "無効",
   },
 };
+
+export const Focused: Story = {
+  render: () => (
+    <Button
+      style={{
+        outline: "2px solid var(--otsukimi-color-brand-primary-deep)",
+        outlineOffset: "2px",
+      }}
+    >
+      フォーカス中
+    </Button>
+  ),
+};
