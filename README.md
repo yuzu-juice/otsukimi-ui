@@ -23,11 +23,6 @@
 - ﾓﾁﾓﾁ
 - ｶﾜｲｲ!
 
-## Status
-
-- Version: v0 preview
-- Accessibility: automated axe checks with 0 violations on all components; page-level WCAG conformance is the consuming application's responsibility
-
 ## Installation
 
 **npm**
