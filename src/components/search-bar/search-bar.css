@@ -1,5 +1,5 @@
 .otsukimi-search-bar {
-  width: 409px;
+  width: 25.5625em;
   max-width: 100%;
   height: 3em;
 
@@ -37,7 +37,7 @@
 }
 
 .otsukimi-search-bar-button {
-  width: 84px;
+  width: 5.25em;
   min-width: 0;
   padding: 0.75em 1.25em;
 }
