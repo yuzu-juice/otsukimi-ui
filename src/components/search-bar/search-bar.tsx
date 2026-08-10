@@ -1,4 +1,5 @@
 import { useState, type FormHTMLAttributes } from "react";
+import { cx } from "../../lib/cx";
 import "./search-bar.css";
 
 type SearchBarProps = Omit<FormHTMLAttributes<HTMLFormElement>, "onSubmit" | "onChange"> & {
@@ -17,6 +18,7 @@ export function SearchBar({
   onSearch,
   buttonLabel = "検索",
   searchLabel = "検索",
+  className,
   ...props
 }: SearchBarProps) {
   const [value, setValue] = useState(defaultValue);
@@ -28,7 +30,7 @@ export function SearchBar({
 
   return (
     <form
-      className="otsukimi-search-bar"
+      className={cx("otsukimi-search-bar", className)}
       onSubmit={(e) => {
         e.preventDefault();
         onSearch?.(value.trim());

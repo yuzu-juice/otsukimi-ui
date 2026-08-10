@@ -45,28 +45,28 @@ function SamplePage() {
           <div className="task-list">
             <div>
               <span>一つ目のタスク</span>
-              <Badge>新規</Badge>
+              <Badge variant="moonlight">新規</Badge>
             </div>
 
             <Divider />
 
             <div>
               <span>二つ目のタスク</span>
-              <Badge>新規</Badge>
+              <Badge variant="moonlight">新規</Badge>
             </div>
 
             <Divider />
 
             <div>
               <span>三つ目のタスク</span>
-              <Badge>進行中</Badge>
+              <Badge variant="primary">進行中</Badge>
             </div>
 
             <Divider />
 
             <div>
               <span>四つ目のタスク</span>
-              <Badge>進行中</Badge>
+              <Badge variant="primary">進行中</Badge>
             </div>
           </div>
 
@@ -76,14 +76,16 @@ function SamplePage() {
         <Card className="sample-card">
           <h2>よく使う機能</h2>
 
-          {[
-            ["ぱ", "ドキュメント"],
-            ["ぴ", "コンポーネント"],
-            ["ぷ", "アイコン"],
-            ["ぺ", "サンプルページ"],
-          ].map(([badge, text]) => (
+          {(
+            [
+              ["ぱ", "ドキュメント", "default"],
+              ["ぴ", "コンポーネント", "primary"],
+              ["ぷ", "アイコン", "moonlight"],
+              ["ぺ", "サンプルページ", "accent-soft"],
+            ] as const
+          ).map(([badge, text, variant]) => (
             <div className="feature-item" key={text}>
-              <Badge>{badge}</Badge>
+              <Badge variant={variant}>{badge}</Badge>
               <span>{text}</span>
             </div>
           ))}
@@ -124,27 +126,6 @@ function SamplePage() {
             <Input placeholder="デフォルト" />
             <Input state="focus" placeholder="フォーカス中" />
             <Input state="disabled" placeholder="無効" />
-          </div>
-        </Card>
-
-        <Card className="sample-card state-card">
-          <h2>チェックボックス</h2>
-
-          <div className="state-col">
-            <Checkbox label="スター(チェック済み)" defaultChecked />
-            <Checkbox label="スター(未チェック)" />
-            <Checkbox label="ムーン(チェック済み)" variant="moon" defaultChecked />
-            <Checkbox label="無効" disabled />
-          </div>
-        </Card>
-
-        <Card className="sample-card state-card">
-          <h2>ラジオボタン</h2>
-
-          <div className="state-col">
-            <RadioButton label="チェック済み" defaultChecked />
-            <RadioButton label="未チェック" />
-            <RadioButton label="無効" disabled />
           </div>
         </Card>
 

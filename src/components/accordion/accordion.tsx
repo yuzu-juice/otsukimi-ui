@@ -1,5 +1,6 @@
 import { useId, useState, type HTMLAttributes } from "react";
 import { ChevronDownIcon, ChevronUpIcon } from "../../icons";
+import { cx } from "../../lib/cx";
 import "./accordion.css";
 
 type AccordionProps = Omit<HTMLAttributes<HTMLDivElement>, "onToggle"> & {
@@ -15,6 +16,7 @@ export function Accordion({
   onToggle,
   title = "よくある質問",
   children,
+  className,
   ...props
 }: AccordionProps) {
   const id = useId();
@@ -28,7 +30,10 @@ export function Accordion({
   };
 
   return (
-    <div className={`otsukimi-accordion ${isOpen ? "otsukimi-accordion-open" : ""}`} {...props}>
+    <div
+      className={cx("otsukimi-accordion", isOpen && "otsukimi-accordion-open", className)}
+      {...props}
+    >
       <button
         type="button"
         className="otsukimi-accordion-header"

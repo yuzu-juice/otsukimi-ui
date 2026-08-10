@@ -1,6 +1,6 @@
 .otsukimi-card {
-  width: 100%;
-  max-width: 320px;
+  width: 320px;
+  max-width: 100%;
   min-height: 158px;
   box-sizing: border-box;
 

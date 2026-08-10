@@ -1,6 +1,6 @@
 .otsukimi-accordion {
-  width: 100%;
-  max-width: 320px;
+  width: 320px;
+  max-width: 100%;
 }
 
 .otsukimi-accordion-header {

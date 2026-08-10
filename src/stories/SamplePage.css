@@ -51,6 +51,7 @@
   box-sizing: border-box;
   padding: 24px;
 
+  width: 100%;
   max-width: none;
 }
 
@@ -75,7 +76,10 @@
 }
 
 .task-card .otsukimi-search-bar {
+  width: 100%;
   max-width: none;
+
+  margin-bottom: 16px;
 }
 
 .task-card .otsukimi-divider {
@@ -143,6 +147,7 @@
 }
 
 .state-card .otsukimi-input {
+  width: 100%;
   max-width: none;
 }
 
@@ -159,6 +164,7 @@
 }
 
 .faq-card .otsukimi-accordion {
+  width: 100%;
   max-width: none;
 }
 
