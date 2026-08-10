@@ -54,7 +54,7 @@
 
   padding: 12px 20px;
 
-  border: 1px solid var(--otsukimi-color-brand-primary);
+  border: 1px solid var(--otsukimi-color-border-default);
   border-radius: var(--otsukimi-radius-full);
 
   font-family: var(--otsukimi-font-body-family);
