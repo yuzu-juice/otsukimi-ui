@@ -69,23 +69,9 @@
   display: none;
 }
 
-.otsukimi-checkbox-icon-moon {
-  color: var(--otsukimi-color-highlight-default);
-}
-
-.otsukimi-checkbox-star
-  .otsukimi-checkbox-input:checked
-  + .otsukimi-checkbox-box
-  .otsukimi-checkbox-icon-star {
+.otsukimi-checkbox-input:checked + .otsukimi-checkbox-box svg {
   display: block;
   color: var(--otsukimi-color-highlight-default);
-}
-
-.otsukimi-checkbox-moon
-  .otsukimi-checkbox-input:checked
-  + .otsukimi-checkbox-box
-  .otsukimi-checkbox-icon-moon {
-  display: block;
 }
 
 .otsukimi-checkbox-label {

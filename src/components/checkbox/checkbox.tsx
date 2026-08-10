@@ -1,5 +1,6 @@
 import { useId, type InputHTMLAttributes } from "react";
 import { StarIcon, MoonIcon } from "../../icons";
+import { cx } from "../../lib/cx";
 import "./checkbox.css";
 
 type CheckboxProps = Omit<InputHTMLAttributes<HTMLInputElement>, "type"> & {
@@ -7,21 +8,21 @@ type CheckboxProps = Omit<InputHTMLAttributes<HTMLInputElement>, "type"> & {
   label?: string;
 };
 
-export function Checkbox({ variant = "star", label, ...props }: CheckboxProps) {
+export function Checkbox({ variant = "star", label, className, ...props }: CheckboxProps) {
   const id = useId();
+  const Icon = variant === "star" ? StarIcon : MoonIcon;
 
   return (
     <span className={`otsukimi-checkbox otsukimi-checkbox-${variant}`}>
       <input
         id={id}
         type="checkbox"
-        className="otsukimi-checkbox-input"
+        className={cx("otsukimi-checkbox-input", className)}
         aria-label={label ? undefined : "checkbox"}
         {...props}
       />
       <label htmlFor={id} className="otsukimi-checkbox-box" aria-hidden="true">
-        <StarIcon className="otsukimi-checkbox-icon-star" />
-        <MoonIcon className="otsukimi-checkbox-icon-moon" />
+        <Icon className="otsukimi-checkbox-icon" />
       </label>
       {label && (
         <label htmlFor={id} className="otsukimi-checkbox-label">

@@ -1,11 +1,12 @@
 import { useId, type InputHTMLAttributes } from "react";
+import { cx } from "../../lib/cx";
 import "./radio-button.css";
 
 type RadioButtonProps = Omit<InputHTMLAttributes<HTMLInputElement>, "type"> & {
   label?: string;
 };
 
-export function RadioButton({ label, ...props }: RadioButtonProps) {
+export function RadioButton({ label, className, ...props }: RadioButtonProps) {
   const id = useId();
 
   return (
@@ -13,7 +14,7 @@ export function RadioButton({ label, ...props }: RadioButtonProps) {
       <input
         id={id}
         type="radio"
-        className="otsukimi-radio-input"
+        className={cx("otsukimi-radio-input", className)}
         aria-label={label ? undefined : "radio button"}
         {...props}
       />

@@ -12,7 +12,6 @@ import {
   RadioButton,
   SearchBar,
 } from "../index";
-import { MoonIcon } from "../icons";
 import "./SamplePage.css";
 
 function SamplePage() {
@@ -27,10 +26,7 @@ function SamplePage() {
         </div>
 
         <div className="sample-page-actions">
-          <Button>
-            <MoonIcon />
-            Get started!
-          </Button>
+          <Button state="moon">Get started!</Button>
 
           <Button state="transparent">See docs</Button>
         </div>
@@ -96,8 +92,8 @@ function SamplePage() {
 
           <h3>テーマ</h3>
 
-          <RadioButton label="ライト" defaultChecked />
-          <RadioButton label="ダーク" />
+          <RadioButton name="theme" label="ライト" defaultChecked />
+          <RadioButton name="theme" label="ダーク" />
 
           <h3>通知</h3>
 
