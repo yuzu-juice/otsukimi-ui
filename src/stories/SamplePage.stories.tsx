@@ -143,18 +143,14 @@ function SamplePage() {
       <Card className="sample-card faq-card">
         <h2>よくある質問</h2>
 
-        <Accordion title="おつきみUIって何?" defaultOpen>
-          ゆめかわテイストのデザインシステムです。星と月をモチーフにした、
-          やさしい色あいのUIコンポーネントを提供しています。
+        <Accordion title="よくある質問って何?" defaultOpen>
+          これは、よくある質問です。よくある質問というのは、頻繁に問い合わせがあるということになりますので、
+          よくあるということになります。つまり、ここに書いてあることはよく質問を受ける事項となっておりますので、
+          よく質問を受けています。
         </Accordion>
 
         <Accordion title="React 19が必要?">
           はい。otsukimi-ui は React 19 を peerDependency に持つため、 React 19 以上が必要です。
-        </Accordion>
-
-        <Accordion title="アクセシビリティは?">
-          キーボード操作・スクリーンリーダー対応を意識したコンポーネント構成です。 WCAG 2.2 AA
-          の完全監査は v1.0 で予定しています。
         </Accordion>
       </Card>
     </main>
