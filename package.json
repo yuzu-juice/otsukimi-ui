@@ -20,10 +20,12 @@
     "./index.css": "./dist/index.css"
   },
   "sideEffects": [
-    "**/*.css"
+    "**/*.css",
+    "./dist/index.js",
+    "./dist/index.cjs"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts && cp src/foundations/tokens.css dist/tokens.css",
+    "build": "tsup && cp src/foundations/tokens.css dist/tokens.css",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "pnpm build",
     "format": "prettier --write .",

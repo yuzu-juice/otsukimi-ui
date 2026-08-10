@@ -57,12 +57,10 @@ bun add otsukimi-ui
 
 ## Quickstart
 
-Import the CSS once, then use the components:
+Components inject their own styles, so a single import is all you need:
 
 ```tsx
 import { Button, Input } from "otsukimi-ui";
-import "otsukimi-ui/tokens.css"; // design tokens (colors, radii, spacing)
-import "otsukimi-ui/index.css"; // component styles
 
 function App() {
   return (
@@ -74,24 +72,26 @@ function App() {
 }
 ```
 
-See [Usage](#usage) for details and [Components](docs/components.md) for every
-component.
-
-## Usage
-
-Components need the design tokens and component styles. Import the CSS once:
-
-```tsx
-import { Button, Input } from "otsukimi-ui";
-import "otsukimi-ui/tokens.css"; // design tokens (colors, radii, spacing)
-import "otsukimi-ui/index.css"; // component styles
-```
-
 `otsukimi-ui` requires React 19 as a peer dependency.
 
 > Note: the font tokens (`--otsukimi-font-body-family` / `--otsukimi-font-heading-family`)
 > reference "LINE Seed JP" and "Zen Maru Gothic", but the library does not load these fonts.
 > Consumers should self-host or bundle them, otherwise the system fallback is used.
+
+## Customizing tokens
+
+Design tokens are CSS variables defined in `:root`. To override them, import
+`otsukimi-ui/tokens.css` and set the variables you care about after it:
+
+```tsx
+import "otsukimi-ui/tokens.css";
+```
+
+```css
+:root {
+  --otsukimi-color-brand-primary-deep: #3f4a9e;
+}
+```
 
 ## Release
 

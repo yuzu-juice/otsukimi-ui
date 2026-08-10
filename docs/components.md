@@ -1,12 +1,14 @@
 # Components
 
-Otsukimi UI is a ﾕﾒｶﾜ (yume-kawaii) React 19 component library. Every component
-works out of the box once the CSS is imported.
+Otsukimi UI is a ﾕﾒｶﾜ (yume-kawaii) React 19 component library. Components
+inject their own styles, so importing the components is enough.
 
 ```tsx
-import "otsukimi-ui/tokens.css"; // design tokens (colors, radii, spacing)
-import "otsukimi-ui/index.css"; // component styles
+import { Button } from "otsukimi-ui";
 ```
+
+To override the design tokens, import `otsukimi-ui/tokens.css` and redefine the
+CSS variables you need.
 
 Each component below links to its live interactive page on Storybook.
 
