@@ -1,7 +1,7 @@
 .otsukimi-button {
   height: 3em;
   min-width: 10em;
-  padding: 0 1.75em;
+  padding: 0 1.25em;
   box-sizing: border-box;
 
   border-radius: var(--otsukimi-radius-full);
