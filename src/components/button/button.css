@@ -5,7 +5,7 @@
   box-sizing: border-box;
 
   border-radius: var(--otsukimi-radius-full);
-  border: 2px solid transparent;
+  border: none;
 
   display: inline-flex;
   align-items: center;
@@ -44,8 +44,8 @@
 }
 
 .otsukimi-button:focus-visible {
-  outline: none;
-  border-color: var(--otsukimi-color-brand-primary-deep);
+  outline: 2px solid var(--otsukimi-color-brand-primary-deep);
+  outline-offset: 2px;
 }
 
 .otsukimi-button:disabled {

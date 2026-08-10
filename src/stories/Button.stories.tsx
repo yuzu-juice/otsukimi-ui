@@ -3,7 +3,8 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from "../components/button";
 
 const focusRing: CSSProperties = {
-  border: "2px solid var(--otsukimi-color-brand-primary-deep)",
+  outline: "2px solid var(--otsukimi-color-brand-primary-deep)",
+  outlineOffset: "2px",
 };
 
 const meta = {
