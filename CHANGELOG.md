@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.2](https://github.com/yuzu-juice/otsukimi-ui/compare/otsukimi-ui-v1.0.1...otsukimi-ui-v1.0.2) (2026-08-10)
+
+
+### Bug Fixes
+
+* remove transparent border causing gradient artifact on buttons ([65b5902](https://github.com/yuzu-juice/otsukimi-ui/commit/65b5902d7e2c635ddca7c5bf550ff48cd8015c98))
+* remove transparent border causing gradient artifact on buttons ([#35](https://github.com/yuzu-juice/otsukimi-ui/issues/35)) ([53ff626](https://github.com/yuzu-juice/otsukimi-ui/commit/53ff62634ff2dfd413435e2db20e420cad1932c2))
+
 ## [1.0.1](https://github.com/yuzu-juice/otsukimi-ui/compare/otsukimi-ui-v1.0.0...otsukimi-ui-v1.0.1) (2026-08-10)
 
 
