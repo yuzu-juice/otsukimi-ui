@@ -1,44 +1,116 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Accordion, Badge, Button, Card, Divider, Link, ListItem, SearchBar } from "../index";
-
-import "./sample-page.css";
+import {
+  Accordion,
+  Badge,
+  Button,
+  Card,
+  Checkbox,
+  Divider,
+  Link,
+  ListItem,
+  RadioButton,
+  SearchBar,
+} from "../index";
+import { MoonIcon, StarIcon } from "../icons";
+import "./SamplePage.css";
 
 function SamplePage() {
   return (
-    <div className="sample-page">
+    <main className="sample-page">
       <header className="sample-page-header">
-        <h1>Otsukimi UI</h1>
-        <p>ゆめかわ × アクセシブルなUIコンポーネント</p>
+        <h1>Hello Otsukimi UI!</h1>
+
+        <div className="sample-page-messages">
+          <ListItem>ﾓﾁﾓﾁ!ｶﾜｲｲ!</ListItem>
+          <ListItem>ﾕﾒｶﾜﾃﾞｻﾞｲﾝｼｽﾃﾑ</ListItem>
+        </div>
+
+        <div className="sample-page-actions">
+          <Button>
+            <MoonIcon />
+            Get started!
+          </Button>
+
+          <Button state="transparent">See docs</Button>
+        </div>
       </header>
 
-      <section className="sample-page-section">
-        <SearchBar />
-      </section>
+      <section className="sample-page-grid">
+        <Card className="sample-card task-card">
+          <h2>タスク一覧</h2>
 
-      <section className="sample-page-section">
-        <Card>
-          <Badge>Example</Badge>
+          <SearchBar />
 
-          <h2>Sample Card</h2>
+          <div className="task-list">
+            <div>
+              <span>一つ目のタスク</span>
+              <Badge>新規</Badge>
+            </div>
 
-          <ListItem>生命</ListItem>
+            <Divider />
 
-          <ListItem variant="dot">宇宙</ListItem>
+            <div>
+              <span>二つ目のタスク</span>
+              <Badge>新規</Badge>
+            </div>
 
-          <Divider />
+            <Divider />
 
-          <Link href="#">詳細を見る</Link>
+            <div>
+              <span>三つ目のタスク</span>
+              <Badge>進行中</Badge>
+            </div>
+
+            <Divider />
+
+            <div>
+              <span>四つ目のタスク</span>
+              <Badge>進行中</Badge>
+            </div>
+          </div>
+
+          <Link href="#">すべて見る</Link>
+        </Card>
+
+        <Card className="sample-card">
+          <h2>よく使う機能</h2>
+
+          {[
+            ["ぱ", "ドキュメント"],
+            ["ぴ", "コンポーネント"],
+            ["ぷ", "アイコン"],
+            ["ぺ", "サンプルページ"],
+          ].map(([badge, text]) => (
+            <div className="feature-item" key={text}>
+              <Badge>{badge}</Badge>
+              <span>{text}</span>
+            </div>
+          ))}
+        </Card>
+
+        <Card className="sample-card setting-card">
+          <h2>設定</h2>
+
+          <h3>テーマ</h3>
+
+          <RadioButton label="ライト" defaultChecked />
+          <RadioButton label="ダーク" />
+
+          <h3>通知</h3>
+
+          <Checkbox label="メール通知" defaultChecked />
+          <Checkbox label="プッシュ通知" />
+          <Checkbox label="郵便通知" defaultChecked />
         </Card>
       </section>
 
-      <section className="sample-page-section">
-        <Accordion title="よくある質問">これはサンプルの回答です。</Accordion>
-      </section>
+      <Card className="sample-card faq-card">
+        <h2>よくある質問</h2>
 
-      <section className="sample-page-section">
-        <Button>はじめる</Button>
-      </section>
-    </div>
+        <Accordion title="よくある質問" />
+        <Accordion title="よくある質問" />
+      </Card>
+    </main>
   );
 }
 

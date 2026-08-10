@@ -1,0 +1,105 @@
+.sample-page {
+  min-height: 100svh;
+  padding: 64px 24px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+
+  background: var(--otsukimi-color-bg-base);
+
+  font-family: var(--otsukimi-font-body-family);
+  color: var(--otsukimi-color-text-primary);
+}
+
+.sample-page-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  font-family: var(--otsukimi-font-heading-family);
+}
+
+.sample-page-header h1 {
+  margin: 0;
+
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.sample-page-messages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.sample-page-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.sample-page-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 1040px;
+}
+
+.sample-card {
+  max-width: none;
+}
+
+.sample-card h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.sample-card h3 {
+  margin: 16px 0 8px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.task-card .otsukimi-search-bar {
+  max-width: none;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-list > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.setting-card {
+  align-items: flex-start;
+}
+
+.faq-card {
+  max-width: 560px;
+  gap: 16px;
+}
+
+.faq-card .otsukimi-accordion {
+  max-width: none;
+}
