@@ -94,7 +94,7 @@ Releases are managed by **release-please** and published to npm via GitHub Actio
 
 ### Pull Request titles
 
-This repository uses **Squash and Merge**. The PR title becomes the final commit message on `main`, so PR titles should follow Conventional Commits.
+PR titles should follow Conventional Commits.
 
 ### Version bumps
 
@@ -109,7 +109,7 @@ Use `fix:` or `feat:` when the change should be included in an npm release.
 
 ### Release flow
 
-1. Merge PRs into `main` using squash merge.
+1. Merge PRs into `main`.
 2. release-please opens a release PR.
 3. Merge the release PR.
 4. GitHub creates a version tag and release.
