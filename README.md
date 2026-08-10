@@ -2,6 +2,12 @@
 
 ﾕﾒｶﾜﾃﾞｻﾞｲﾝｼｽﾃﾑ
 
+## Storybook
+
+Live component docs are published to GitHub Pages:
+
+https://yuzu-juice.github.io/otsukimi-ui/
+
 ## Concept
 
 - ﾕﾒｶﾜ
