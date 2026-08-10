@@ -10,14 +10,15 @@ source of truth: `src/foundations/tokens.css`
 | color-bg-surface         | `#FFFFFF` |
 | color-brand-primary      | `#DCA3FF` |
 | color-brand-primary-soft | `#EFD6FF` |
-| color-brand-primary-deep | `#7B8CFF` |
+| color-brand-primary-deep | `#5560C9` |
 | color-accent-default     | `#8EDAF7` |
 | color-accent-soft        | `#CDEFFF` |
 | color-text-primary       | `#483354` |
-| color-text-secondary     | `#7A7691` |
+| color-text-secondary     | `#6F6A86` |
 | color-border-default     | `#E8DCF3` |
 | color-highlight-default  | `#FFBC00` |
 | color-highlight-soft     | `#FFF3C7` |
+| color-secondary          | `#FFE1EE` |
 
 ---
 
@@ -50,7 +51,9 @@ source of truth: `src/foundations/tokens.css`
 
 ### Target
 
-WCAG 2.1 AA
+- All components pass automated accessibility checks (axe, Storybook a11y): Violations = 0
+- Interactive components are keyboard-operable with a visible focus indicator
+- Page-level WCAG conformance is the consuming application's responsibility
 
 ### Principles
 
