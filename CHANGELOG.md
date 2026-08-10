@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/yuzu-juice/otsukimi-ui/compare/otsukimi-ui-v0.2.0...otsukimi-ui-v0.3.0) (2026-08-09)
+
+
+### Features
+
+* card component ([#24](https://github.com/yuzu-juice/otsukimi-ui/issues/24)) ([f20f411](https://github.com/yuzu-juice/otsukimi-ui/commit/f20f411bc81cb35dc4acb26d6fab03e82a6c2147))
+
 ## [0.2.0](https://github.com/yuzu-juice/otsukimi-ui/compare/otsukimi-ui-v0.1.0...otsukimi-ui-v0.2.0) (2026-08-09)
 
 
