@@ -1,4 +1,4 @@
-# Otsukimi UI for Developers
+# Otsukimi UI DEVDOC
 
 ## Release
 
