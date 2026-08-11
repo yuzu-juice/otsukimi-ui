@@ -1,7 +1,7 @@
 {
   "name": "otsukimi-ui",
   "version": "1.1.1",
-  "description": "",
+  "description": "Kawaii Rect UI component library.",
   "type": "module",
   "files": [
     "dist",
@@ -13,8 +13,7 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": "./dist/index.js"
     },
     "./tokens.css": "./dist/tokens.css",
     "./index.css": "./dist/index.css"
