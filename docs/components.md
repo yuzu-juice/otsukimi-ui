@@ -1,7 +1,6 @@
 # Components
 
-Otsukimi UI is a ﾕﾒｶﾜ (yume-kawaii) React 19 component library. Components
-inject their own styles, so importing the components is enough.
+Otsukimi UI is a kawaii React 19 component library. Components inject their own styles, so importing the components is enough.
 
 ```tsx
 import { Button } from "otsukimi-ui";

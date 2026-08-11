@@ -1,7 +1,7 @@
 {
   "name": "otsukimi-ui",
   "version": "1.1.1",
-  "description": "",
+  "description": "Kawaii React UI component library.",
   "type": "module",
   "files": [
     "dist",
@@ -13,8 +13,7 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": "./dist/index.js"
     },
     "./tokens.css": "./dist/tokens.css",
     "./index.css": "./dist/index.css"
@@ -53,11 +52,11 @@
     "@storybook/addon-docs": "^10.5.7",
     "@storybook/react": "^10.5.7",
     "@storybook/react-vite": "^10.5.7",
-    "@types/react": "^19.2.17",
-    "@types/react-dom": "^19.2.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
     "husky": "^9.1.7",
-    "lint-staged": "^17.0.7",
-    "prettier": "^3.8.4",
+    "lint-staged": "^17.3.0",
+    "prettier": "^3.9.6",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "storybook": "^10.5.7",
