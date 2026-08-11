@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.2](https://github.com/yuzu-juice/otsukimi-ui/compare/otsukimi-ui-v1.1.1...otsukimi-ui-v1.1.2) (2026-08-11)
+
+
+### Bug Fixes
+
+* unsupport cjs ([8a1069b](https://github.com/yuzu-juice/otsukimi-ui/commit/8a1069ba8f9943ac80ac5cefc523be4488fe45be))
+* update deps ([5eaadb4](https://github.com/yuzu-juice/otsukimi-ui/commit/5eaadb45ec6477f93d77606cbf883ab974382a93))
+* update docs ([78c56aa](https://github.com/yuzu-juice/otsukimi-ui/commit/78c56aa7b16a3d702d515615f2796d33258840a1))
+* update docs ([#43](https://github.com/yuzu-juice/otsukimi-ui/issues/43)) ([4d2d40f](https://github.com/yuzu-juice/otsukimi-ui/commit/4d2d40f3202cf96aa3eddfc2734c5d9bbb097c48))
+* update: docs ([409d6c0](https://github.com/yuzu-juice/otsukimi-ui/commit/409d6c0f718b7677d716c9f2faea9a8c1c315e4d))
+* update: docs ([fa20e19](https://github.com/yuzu-juice/otsukimi-ui/commit/fa20e1933c016b2fd9a2862866b2c5408004cf7b))
+
 ## [1.1.1](https://github.com/yuzu-juice/otsukimi-ui/compare/otsukimi-ui-v1.1.0...otsukimi-ui-v1.1.1) (2026-08-10)
 
 
