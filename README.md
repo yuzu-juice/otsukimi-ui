@@ -13,7 +13,6 @@ Otsukimi UI is a React component library.
 
 ## Documentation
 
-- [Concept](docs/concept.md)
 - [Foundations](docs/foundations.md)
 - [Components](docs/components.md)
 - [Accessibility](docs/accessibility.md)

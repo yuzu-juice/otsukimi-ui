@@ -20,8 +20,6 @@ source of truth: `src/foundations/tokens.css`
 | color-highlight-soft     | `#FFF3C7` |
 | color-secondary          | `#FFE1EE` |
 
----
-
 ## Radius
 
 | Token       | Value  |
@@ -31,8 +29,6 @@ source of truth: `src/foundations/tokens.css`
 | radius-md   | 24px   |
 | radius-lg   | 32px   |
 | radius-full | 9999px |
-
----
 
 ## Spacing
 
@@ -44,26 +40,3 @@ source of truth: `src/foundations/tokens.css`
 | spacing-4 | 24px  |
 | spacing-5 | 32px  |
 | spacing-6 | 64px  |
-
----
-
-## Accessibility
-
-### Target
-
-- All components pass automated accessibility checks (axe, Storybook a11y): Violations = 0
-- Interactive components are keyboard-operable with a visible focus indicator
-- Page-level WCAG conformance is the consuming application's responsibility
-
-### Principles
-
-- Accessible First
-- Cute Second
-- Clear and Consistent
-
-### Requirements
-
-- Text contrast ratio ≥ 4.5:1
-- Visible focus indicators
-- Keyboard accessible
-- Touch targets ≥ 44×44px
