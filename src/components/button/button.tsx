@@ -10,6 +10,7 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 export function Button({ variant = "default", children, className, ...props }: ButtonProps) {
   return (
     <button
+      type="button"
       className={cx(
         "otsukimi-button",
         variant !== "default" && `otsukimi-button-${variant}`,

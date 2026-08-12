@@ -1,18 +1,18 @@
-import type { ReactNode } from "react";
+import type { LiHTMLAttributes } from "react";
 import { StarIcon, DotIcon } from "../../icons";
+import { cx } from "../../lib/cx";
 import "./list-item.css";
 
-type ListItemProps = {
+type ListItemProps = LiHTMLAttributes<HTMLLIElement> & {
   variant?: "star" | "dot";
-  children?: ReactNode;
 };
 
-export function ListItem({ variant = "star", children }: ListItemProps) {
+export function ListItem({ variant = "star", className, children, ...props }: ListItemProps) {
   return (
-    <div className={`otsukimi-list-item otsukimi-list-item-${variant}`}>
+    <li className={cx("otsukimi-list-item", `otsukimi-list-item-${variant}`, className)} {...props}>
       {variant === "star" ? <StarIcon /> : <DotIcon />}
 
       <span>{children}</span>
-    </div>
+    </li>
   );
 }

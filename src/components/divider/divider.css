@@ -1,12 +1,13 @@
 .otsukimi-divider {
-  width: 300px;
+  width: 100%;
   height: 1px;
+
+  border: 0;
 
   background: var(--otsukimi-color-border-default);
 }
 
 .otsukimi-divider-dashed {
-  width: 301px;
   height: 1px;
 
   background: repeating-linear-gradient(

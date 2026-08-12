@@ -1,4 +1,4 @@
-import { useState, type FormHTMLAttributes, type InputHTMLAttributes } from "react";
+import { useState, type FormHTMLAttributes } from "react";
 import { cx } from "../../lib/cx";
 import { Button } from "../button";
 import "./search-bar.css";
@@ -9,9 +9,8 @@ type SearchBarProps = Omit<FormHTMLAttributes<HTMLFormElement>, "onSubmit" | "on
   defaultValue?: string;
   onChange?: (value: string) => void;
   onSearch?: (value: string) => void;
-  buttonLabel?: string;
-  searchLabel?: string;
-  inputProps?: InputHTMLAttributes<HTMLInputElement>;
+  buttonLabel: string;
+  searchLabel: string;
 };
 
 export function SearchBar({
@@ -23,7 +22,6 @@ export function SearchBar({
   buttonLabel,
   searchLabel,
   className,
-  inputProps,
   ...props
 }: SearchBarProps) {
   const [internal, setInternal] = useState(defaultValue);
@@ -48,7 +46,6 @@ export function SearchBar({
         className="otsukimi-search-bar-input otsukimi-field"
         placeholder={placeholder}
         aria-label={searchLabel}
-        {...inputProps}
         value={current}
         onChange={(e) => handleChange(e.target.value)}
       />

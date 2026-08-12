@@ -7,7 +7,7 @@ type AccordionProps = Omit<HTMLAttributes<HTMLDivElement>, "onToggle"> & {
   open?: boolean;
   defaultOpen?: boolean;
   onToggle?: (open: boolean) => void;
-  title?: string;
+  title: string;
 };
 
 export function Accordion({
