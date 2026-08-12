@@ -9,9 +9,12 @@ type SearchBarProps = Omit<FormHTMLAttributes<HTMLFormElement>, "onSubmit" | "on
   defaultValue?: string;
   onChange?: (value: string) => void;
   onSearch?: (value: string) => void;
-  buttonLabel?: string;
-  searchLabel?: string;
-  inputProps?: InputHTMLAttributes<HTMLInputElement>;
+  buttonLabel: string;
+  searchLabel: string;
+  inputProps?: Omit<
+    InputHTMLAttributes<HTMLInputElement>,
+    "type" | "aria-label" | "value" | "onChange"
+  >;
 };
 
 export function SearchBar({
@@ -28,6 +31,7 @@ export function SearchBar({
 }: SearchBarProps) {
   const [internal, setInternal] = useState(defaultValue);
   const current = (value !== undefined ? value : internal) ?? "";
+  const { className: inputClassName, ...restInputProps } = inputProps ?? {};
 
   const handleChange = (next: string) => {
     if (value === undefined) setInternal(next);
@@ -45,10 +49,10 @@ export function SearchBar({
     >
       <input
         type="search"
-        className="otsukimi-search-bar-input otsukimi-field"
+        {...restInputProps}
+        className={cx("otsukimi-search-bar-input otsukimi-field", inputClassName)}
         placeholder={placeholder}
         aria-label={searchLabel}
-        {...inputProps}
         value={current}
         onChange={(e) => handleChange(e.target.value)}
       />
