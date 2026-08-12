@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.2.0](https://github.com/yuzu-juice/otsukimi-ui/compare/otsukimi-ui-v1.1.2...otsukimi-ui-v1.2.0) (2026-08-12)
+
+
+### Features
+
+* drop unused inputProps from SearchBar ([7ba6c6b](https://github.com/yuzu-juice/otsukimi-ui/commit/7ba6c6be7565b06500b3436236bd41937d0dc646))
+* harden publish manifest and accessible semantics ([6602433](https://github.com/yuzu-juice/otsukimi-ui/commit/66024336873f97e9f84297f7f8a07bbeac563aa6))
+* harden publish manifest and accessible semantics ([#45](https://github.com/yuzu-juice/otsukimi-ui/issues/45)) ([cd767a7](https://github.com/yuzu-juice/otsukimi-ui/commit/cd767a75e045a2b86ad91ad1f7ee89a222227f7d))
+
+
+### Bug Fixes
+
+* drop tests and trim package manifest ([c3bda0d](https://github.com/yuzu-juice/otsukimi-ui/commit/c3bda0d36756c11894b0c57a425fdb221d7f8c56))
+
 ## [1.1.2](https://github.com/yuzu-juice/otsukimi-ui/compare/otsukimi-ui-v1.1.1...otsukimi-ui-v1.1.2) (2026-08-11)
 
 
