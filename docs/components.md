@@ -170,7 +170,7 @@ Props:
 
 | Name        | Type                      | Required | Description                          |
 | ----------- | ------------------------- | -------- | ------------------------------------ |
-| title       | `string`                  | no       | Header text                          |
+| title       | `string`                  | yes      | Header text                          |
 | open        | `boolean`                 | no       | Controlled open state                |
 | defaultOpen | `boolean`                 | no       | Initial open state. Default: `false` |
 | onToggle    | `(open: boolean) => void` | no       | Called with the next state on toggle |
@@ -231,16 +231,15 @@ A search input paired with a submit button.
 
 Props:
 
-| Name         | Type                       | Required | Description                             |
-| ------------ | -------------------------- | -------- | --------------------------------------- |
-| placeholder  | `string`                   | no       | Input placeholder                       |
-| value        | `string`                   | no       | Controlled input value                  |
-| defaultValue | `string`                   | no       | Initial input value                     |
-| onChange     | `(value: string) => void`  | no       | Called with the input value             |
-| onSearch     | `(value: string) => void`  | no       | Called with the trimmed value on submit |
-| buttonLabel  | `string`                   | no       | Submit button text                      |
-| searchLabel  | `string`                   | no       | Accessible name for the input           |
-| inputProps   | `InputHTMLAttributes<...>` | no       | Extra attributes for the input          |
+| Name         | Type                      | Required | Description                             |
+| ------------ | ------------------------- | -------- | --------------------------------------- |
+| placeholder  | `string`                  | no       | Input placeholder                       |
+| value        | `string`                  | no       | Controlled input value                  |
+| defaultValue | `string`                  | no       | Initial input value                     |
+| onChange     | `(value: string) => void` | no       | Called with the input value             |
+| onSearch     | `(value: string) => void` | no       | Called with the trimmed value on submit |
+| buttonLabel  | `string`                  | yes      | Submit button text                      |
+| searchLabel  | `string`                  | yes      | Accessible name for the input           |
 
 Inherits all native `<form>` attributes except `onSubmit` and `onChange`.
 
