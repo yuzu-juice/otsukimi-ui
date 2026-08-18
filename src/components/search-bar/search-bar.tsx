@@ -1,16 +1,21 @@
-import { useState, type FormHTMLAttributes } from "react";
+import { useState, type ComponentPropsWithRef, type ReactNode } from "react";
 import { cx } from "../../lib/cx";
-import { Button } from "../button";
+import { Button } from "../button/button";
 import "./search-bar.css";
 
-type SearchBarProps = Omit<FormHTMLAttributes<HTMLFormElement>, "onSubmit" | "onChange"> & {
+export type SearchBarProps = Omit<ComponentPropsWithRef<"form">, "onSubmit" | "onChange"> & {
   placeholder?: string;
   value?: string;
   defaultValue?: string;
   onChange?: (value: string) => void;
   onSearch?: (value: string) => void;
-  buttonLabel: string;
+  buttonLabel: ReactNode;
   searchLabel: string;
+  inputProps?: Omit<
+    ComponentPropsWithRef<"input">,
+    "type" | "aria-label" | "value" | "defaultValue" | "onChange" | "placeholder"
+  >;
+  buttonProps?: Omit<ComponentPropsWithRef<"button">, "type" | "children">;
 };
 
 export function SearchBar({
@@ -21,11 +26,16 @@ export function SearchBar({
   onSearch,
   buttonLabel,
   searchLabel,
+  inputProps,
+  buttonProps,
   className,
+  ref,
   ...props
 }: SearchBarProps) {
   const [internal, setInternal] = useState(defaultValue);
   const current = (value !== undefined ? value : internal) ?? "";
+  const { className: inputClassName, ...restInputProps } = inputProps ?? {};
+  const { className: buttonClassName, ...restButtonProps } = buttonProps ?? {};
 
   const handleChange = (next: string) => {
     if (value === undefined) setInternal(next);
@@ -34,6 +44,7 @@ export function SearchBar({
 
   return (
     <form
+      ref={ref}
       className={cx("otsukimi-search-bar", className)}
       onSubmit={(e) => {
         e.preventDefault();
@@ -42,6 +53,7 @@ export function SearchBar({
       {...props}
     >
       <input
+        {...restInputProps}
         type="search"
         className="otsukimi-search-bar-input otsukimi-field"
         placeholder={placeholder}
@@ -49,7 +61,11 @@ export function SearchBar({
         value={current}
         onChange={(e) => handleChange(e.target.value)}
       />
-      <Button type="submit" className="otsukimi-search-bar-button">
+      <Button
+        {...restButtonProps}
+        type="submit"
+        className={cx("otsukimi-search-bar-button", buttonClassName)}
+      >
         {buttonLabel}
       </Button>
     </form>

@@ -1,9 +1,11 @@
-import type { InputHTMLAttributes } from "react";
+import type { ComponentPropsWithRef } from "react";
 import { cx } from "../../lib/cx";
 import "./input.css";
 
-type InputProps = InputHTMLAttributes<HTMLInputElement>;
+export type InputProps = ComponentPropsWithRef<"input">;
 
-export function Input({ className, ...props }: InputProps) {
-  return <input className={cx("otsukimi-input", "otsukimi-field", className)} {...props} />;
+export function Input({ className, ref, ...props }: InputProps) {
+  return (
+    <input ref={ref} className={cx("otsukimi-input", "otsukimi-field", className)} {...props} />
+  );
 }

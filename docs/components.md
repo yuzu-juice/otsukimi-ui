@@ -1,6 +1,7 @@
 # Components
 
 Otsukimi UI is a kawaii React 19 component library. Components inject their own styles, so importing the components is enough.
+Each component exports its `XProps` type and forwards `ref` to its root element. `Checkbox` and `RadioButton` also accept `inputRef` for the native input.
 
 ```tsx
 import { Button } from "otsukimi-ui";
@@ -22,10 +23,10 @@ Each component below links to its live interactive page on Storybook.
 | Checkbox    | `Checkbox`    | `<input type="checkbox">` |
 | RadioButton | `RadioButton` | `<input type="radio">`    |
 | Accordion   | `Accordion`   | `<div>` + `<button>`      |
-| Divider     | `Divider`     | `<div>`                   |
+| Divider     | `Divider`     | `<hr>`                    |
 | Link        | `Link`        | `<a>`                     |
 | SearchBar   | `SearchBar`   | `<form>`                  |
-| ListItem    | `ListItem`    | `<div>`                   |
+| ListItem    | `ListItem`    | `<li>`                    |
 
 ---
 
@@ -123,10 +124,10 @@ A checkable toggle rendered as a star or moon icon.
 
 Props:
 
-| Name    | Type               | Required | Description                        |
-| ------- | ------------------ | -------- | ---------------------------------- |
-| variant | `"star" \| "moon"` | no       | Checked icon. Default: `"star"`    |
-| label   | `string`           | no       | Text rendered next to the checkbox |
+| Name    | Type               | Required | Description                           |
+| ------- | ------------------ | -------- | ------------------------------------- |
+| variant | `"star" \| "moon"` | no       | Checked icon. Default: `"star"`       |
+| label   | `ReactNode`        | no       | Content rendered next to the checkbox |
 
 Inherits all native `<input>` attributes except `type`.
 
@@ -145,9 +146,9 @@ A single-select radio input.
 
 Props:
 
-| Name  | Type     | Required | Description                     |
-| ----- | -------- | -------- | ------------------------------- |
-| label | `string` | no       | Text rendered next to the radio |
+| Name  | Type        | Required | Description                        |
+| ----- | ----------- | -------- | ---------------------------------- |
+| label | `ReactNode` | no       | Content rendered next to the radio |
 
 Inherits all native `<input>` attributes except `type`. Use the same `name`
 attribute to group radios.
@@ -170,7 +171,7 @@ Props:
 
 | Name        | Type                      | Required | Description                          |
 | ----------- | ------------------------- | -------- | ------------------------------------ |
-| title       | `string`                  | yes      | Header text                          |
+| title       | `ReactNode`               | yes      | Header content                       |
 | open        | `boolean`                 | no       | Controlled open state                |
 | defaultOpen | `boolean`                 | no       | Initial open state. Default: `false` |
 | onToggle    | `(open: boolean) => void` | no       | Called with the next state on toggle |
@@ -238,8 +239,10 @@ Props:
 | defaultValue | `string`                  | no       | Initial input value                     |
 | onChange     | `(value: string) => void` | no       | Called with the input value             |
 | onSearch     | `(value: string) => void` | no       | Called with the trimmed value on submit |
-| buttonLabel  | `string`                  | yes      | Submit button text                      |
+| buttonLabel  | `ReactNode`               | yes      | Submit button content                   |
 | searchLabel  | `string`                  | yes      | Accessible name for the input           |
+| inputProps   | native `<input>` props    | no       | Extra attributes for the input          |
+| buttonProps  | native `<button>` props   | no       | Extra attributes for the submit button  |
 
 Inherits all native `<form>` attributes except `onSubmit` and `onChange`.
 
