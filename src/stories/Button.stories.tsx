@@ -1,6 +1,6 @@
 import type { CSSProperties } from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { Button } from "../components/button";
+import { Button } from "../components/button/button";
 
 const focusRing: CSSProperties = {
   outline: "2px solid var(--otsukimi-color-brand-primary-deep)",

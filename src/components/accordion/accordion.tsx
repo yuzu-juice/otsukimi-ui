@@ -1,13 +1,13 @@
-import { useId, useState, type HTMLAttributes } from "react";
+import { useId, useState, type ComponentPropsWithRef, type ReactNode } from "react";
 import { ChevronDownIcon, ChevronUpIcon } from "../../icons";
 import { cx } from "../../lib/cx";
 import "./accordion.css";
 
-type AccordionProps = Omit<HTMLAttributes<HTMLDivElement>, "onToggle"> & {
+export type AccordionProps = Omit<ComponentPropsWithRef<"div">, "onToggle" | "title"> & {
   open?: boolean;
   defaultOpen?: boolean;
   onToggle?: (open: boolean) => void;
-  title: string;
+  title: ReactNode;
 };
 
 export function Accordion({
@@ -17,6 +17,7 @@ export function Accordion({
   title,
   children,
   className,
+  ref,
   ...props
 }: AccordionProps) {
   const id = useId();
@@ -31,6 +32,7 @@ export function Accordion({
 
   return (
     <div
+      ref={ref}
       className={cx("otsukimi-accordion", isOpen && "otsukimi-accordion-open", className)}
       {...props}
     >

@@ -1,13 +1,17 @@
-import type { HTMLAttributes } from "react";
+import type { ComponentPropsWithRef } from "react";
 import { cx } from "../../lib/cx";
 import "./divider.css";
 
-type DividerProps = HTMLAttributes<HTMLHRElement> & {
+export type DividerProps = ComponentPropsWithRef<"hr"> & {
   variant?: "solid" | "dashed";
 };
 
-export function Divider({ variant = "solid", className, ...props }: DividerProps) {
+export function Divider({ variant = "solid", className, ref, ...props }: DividerProps) {
   return (
-    <hr className={cx("otsukimi-divider", `otsukimi-divider-${variant}`, className)} {...props} />
+    <hr
+      ref={ref}
+      className={cx("otsukimi-divider", `otsukimi-divider-${variant}`, className)}
+      {...props}
+    />
   );
 }

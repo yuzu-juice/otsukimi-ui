@@ -1,12 +1,12 @@
-import type { HTMLAttributes } from "react";
+import type { ComponentPropsWithRef } from "react";
 import { cx } from "../../lib/cx";
 import "./card.css";
 
-type CardProps = HTMLAttributes<HTMLDivElement>;
+export type CardProps = ComponentPropsWithRef<"div">;
 
-export function Card({ children, className, ...props }: CardProps) {
+export function Card({ children, className, ref, ...props }: CardProps) {
   return (
-    <div className={cx("otsukimi-card", className)} {...props}>
+    <div ref={ref} className={cx("otsukimi-card", className)} {...props}>
       {children}
     </div>
   );
