@@ -14,10 +14,11 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
+    "./styles.css": "./dist/index.css",
     "./tokens.css": "./dist/tokens.css"
   },
   "sideEffects": [
-    "./dist/index.js"
+    "**/*.css"
   ],
   "scripts": {
     "build": "tsup && cp src/foundations/tokens.css dist/tokens.css",
