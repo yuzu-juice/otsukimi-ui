@@ -53,6 +53,10 @@ bun add otsukimi-ui
 
 ## Quickstart
 
+```css
+@import "otsukimi-ui/styles.css"
+```
+
 ```tsx
 import { Button, Input } from "otsukimi-ui";
 
