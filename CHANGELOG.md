@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/yuzu-juice/otsukimi-ui/compare/otsukimi-ui-v1.2.0...otsukimi-ui-v1.2.1) (2026-08-29)
+
+
+### Bug Fixes
+
+* missing style sheets ([5d6dffe](https://github.com/yuzu-juice/otsukimi-ui/commit/5d6dffe491c6300a4a67157ca2ad489c9f1883e7))
+
 ## [1.2.0](https://github.com/yuzu-juice/otsukimi-ui/compare/otsukimi-ui-v1.1.2...otsukimi-ui-v1.2.0) (2026-08-18)
 
 
