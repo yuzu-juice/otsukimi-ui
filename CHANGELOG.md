@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.0](https://github.com/yuzu-juice/otsukimi-ui/compare/otsukimi-ui-v1.2.2...otsukimi-ui-v1.3.0) (2026-09-03)
+
+
+### Features
+
+* ship styles in the otsukimi cascade layer ([6ab3472](https://github.com/yuzu-juice/otsukimi-ui/commit/6ab3472a63656da0c947a70b1d75174b074546af))
+* ship styles in the otsukimi cascade layer ([#54](https://github.com/yuzu-juice/otsukimi-ui/issues/54)) ([816f70c](https://github.com/yuzu-juice/otsukimi-ui/commit/816f70c6fd72ce981778475fa5a464ad12b45fc1))
+
 ## [1.2.2](https://github.com/yuzu-juice/otsukimi-ui/compare/otsukimi-ui-v1.2.1...otsukimi-ui-v1.2.2) (2026-09-03)
 
 
