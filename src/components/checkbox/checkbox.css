@@ -1,79 +1,81 @@
-.otsukimi-checkbox {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
+@layer otsukimi {
+  .otsukimi-checkbox {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
 
-  position: relative;
+    position: relative;
 
-  font-family: var(--otsukimi-font-body-family);
-  font-size: 1rem;
-  font-weight: 400;
+    font-family: var(--otsukimi-font-body-family);
+    font-size: 1rem;
+    font-weight: 400;
 
-  color: var(--otsukimi-color-text-primary);
+    color: var(--otsukimi-color-text-primary);
 
-  cursor: pointer;
-}
+    cursor: pointer;
+  }
 
-.otsukimi-checkbox-box {
-  width: 1.5em;
-  height: 1.5em;
-  box-sizing: border-box;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 2px solid var(--otsukimi-color-border-default);
-  border-radius: var(--otsukimi-radius-xs);
-
-  background: var(--otsukimi-color-bg-surface);
-
-  transition:
-    background 0.15s ease,
-    border-color 0.15s ease;
-}
-
-.otsukimi-checkbox-input:checked + .otsukimi-checkbox-box {
-  background: var(--otsukimi-color-brand-primary-deep);
-  border-color: var(--otsukimi-color-brand-primary-deep);
-}
-
-.otsukimi-checkbox-input:focus-visible + .otsukimi-checkbox-box {
-  outline: 2px solid var(--otsukimi-color-brand-primary-deep);
-  outline-offset: 2px;
-}
-
-.otsukimi-checkbox-input:disabled + .otsukimi-checkbox-box {
-  opacity: 0.5;
-}
-
-.otsukimi-checkbox:has(.otsukimi-checkbox-input:disabled) {
-  cursor: not-allowed;
-}
-
-.otsukimi-checkbox-box svg {
-  width: 24px;
-  height: 24px;
-  display: none;
-}
-
-.otsukimi-checkbox-input:checked + .otsukimi-checkbox-box svg {
-  display: block;
-  color: var(--otsukimi-color-highlight-default);
-}
-
-.otsukimi-checkbox-moon .otsukimi-checkbox-icon {
-  width: 1.375em;
-  height: 1.25em;
-}
-
-.otsukimi-checkbox-label {
-  line-height: 1.5;
-  cursor: pointer;
-}
-
-@media (prefers-reduced-motion: reduce) {
   .otsukimi-checkbox-box {
-    transition: none;
+    width: 1.5em;
+    height: 1.5em;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 2px solid var(--otsukimi-color-border-default);
+    border-radius: var(--otsukimi-radius-xs);
+
+    background: var(--otsukimi-color-bg-surface);
+
+    transition:
+      background 0.15s ease,
+      border-color 0.15s ease;
+  }
+
+  .otsukimi-checkbox-input:checked + .otsukimi-checkbox-box {
+    background: var(--otsukimi-color-brand-primary-deep);
+    border-color: var(--otsukimi-color-brand-primary-deep);
+  }
+
+  .otsukimi-checkbox-input:focus-visible + .otsukimi-checkbox-box {
+    outline: 2px solid var(--otsukimi-color-brand-primary-deep);
+    outline-offset: 2px;
+  }
+
+  .otsukimi-checkbox-input:disabled + .otsukimi-checkbox-box {
+    opacity: 0.5;
+  }
+
+  .otsukimi-checkbox:has(.otsukimi-checkbox-input:disabled) {
+    cursor: not-allowed;
+  }
+
+  .otsukimi-checkbox-box svg {
+    width: 24px;
+    height: 24px;
+    display: none;
+  }
+
+  .otsukimi-checkbox-input:checked + .otsukimi-checkbox-box svg {
+    display: block;
+    color: var(--otsukimi-color-highlight-default);
+  }
+
+  .otsukimi-checkbox-moon .otsukimi-checkbox-icon {
+    width: 1.375em;
+    height: 1.25em;
+  }
+
+  .otsukimi-checkbox-label {
+    line-height: 1.5;
+    cursor: pointer;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .otsukimi-checkbox-box {
+      transition: none;
+    }
   }
 }

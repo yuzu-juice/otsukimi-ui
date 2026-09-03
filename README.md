@@ -76,6 +76,24 @@ function App() {
 > reference "LINE Seed JP" and "Zen Maru Gothic", but the library does not load these fonts.
 > Consumers should self-host or bundle them, otherwise the system fallback is used.
 
+## Cascade layer
+
+All styles ship inside the `otsukimi` cascade layer, so any unlayered CSS in your
+app beats them without `!important`.
+
+Layer order follows first appearance, so with Tailwind CSS v4 declare the order
+yourself to keep `otsukimi` below Tailwind's utilities:
+
+```css
+@layer otsukimi, theme, base, components, utilities;
+
+@import "tailwindcss";
+@import "otsukimi-ui/styles.css";
+```
+
+Without that first line, importing the library after Tailwind would let it win
+over utility classes such as `bg-white`.
+
 ## Customizing tokens
 
 Design tokens are CSS variables defined in `:root`. To override them, import

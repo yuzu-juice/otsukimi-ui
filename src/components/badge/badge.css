@@ -1,31 +1,33 @@
-.otsukimi-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+@layer otsukimi {
+  .otsukimi-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-  padding: 6px 12px;
+    padding: 6px 12px;
 
-  border-radius: var(--otsukimi-radius-full);
+    border-radius: var(--otsukimi-radius-full);
 
-  font-family: var(--otsukimi-font-body-family);
-  font-size: 0.8125rem;
-  font-weight: 400;
+    font-family: var(--otsukimi-font-body-family);
+    font-size: 0.8125rem;
+    font-weight: 400;
 
-  color: var(--otsukimi-color-text-primary);
-}
+    color: var(--otsukimi-color-text-primary);
+  }
 
-.otsukimi-badge-default {
-  background: var(--otsukimi-color-secondary);
-}
+  .otsukimi-badge-default {
+    background: var(--otsukimi-color-secondary);
+  }
 
-.otsukimi-badge-primary {
-  background: var(--otsukimi-color-brand-primary-soft);
-}
+  .otsukimi-badge-primary {
+    background: var(--otsukimi-color-brand-primary-soft);
+  }
 
-.otsukimi-badge-moonlight {
-  background: var(--otsukimi-color-highlight-soft);
-}
+  .otsukimi-badge-moonlight {
+    background: var(--otsukimi-color-highlight-soft);
+  }
 
-.otsukimi-badge-accent-soft {
-  background: var(--otsukimi-color-accent-soft);
+  .otsukimi-badge-accent-soft {
+    background: var(--otsukimi-color-accent-soft);
+  }
 }
