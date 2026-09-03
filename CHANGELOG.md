@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.2](https://github.com/yuzu-juice/otsukimi-ui/compare/otsukimi-ui-v1.2.1...otsukimi-ui-v1.2.2) (2026-09-03)
+
+
+### Bug Fixes
+
+* make component widths fluid ([4b17320](https://github.com/yuzu-juice/otsukimi-ui/commit/4b17320844acb8e5dfcbb914124ff3b4515adc21))
+* make component widths fluid ([#51](https://github.com/yuzu-juice/otsukimi-ui/issues/51)) ([dd031af](https://github.com/yuzu-juice/otsukimi-ui/commit/dd031af16d596fae865ed01f123843ca8c7d9797))
+
 ## [1.2.1](https://github.com/yuzu-juice/otsukimi-ui/compare/otsukimi-ui-v1.2.0...otsukimi-ui-v1.2.1) (2026-08-29)
 
 
