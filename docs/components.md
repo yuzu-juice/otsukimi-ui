@@ -10,6 +10,10 @@ import { Button } from "otsukimi-ui";
 To override the design tokens, import `otsukimi-ui/tokens.css` and redefine the
 CSS variables you need.
 
+`Input`, `Accordion`, and `SearchBar` fill the width of their parent. `Button`
+and `Badge` size themselves to their content. Use `className` or `style` when a
+different width is needed.
+
 Each component below links to its live interactive page on Storybook.
 
 ## Overview
