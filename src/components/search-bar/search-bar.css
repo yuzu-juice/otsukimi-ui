@@ -1,6 +1,5 @@
 .otsukimi-search-bar {
-  width: 25.5625em;
-  max-width: 100%;
+  width: 100%;
   min-height: 3em;
 
   display: flex;
@@ -11,7 +10,6 @@
 .otsukimi-search-bar-input {
   flex: 1 1 auto;
   min-width: 0;
-  width: 20em;
   min-height: 3em;
   box-sizing: border-box;
 
@@ -39,7 +37,6 @@
 
 .otsukimi-search-bar-button {
   flex: 0 0 auto;
-  width: 5.25em;
   min-width: 0;
   padding: 0.75em 1.25em;
 }
