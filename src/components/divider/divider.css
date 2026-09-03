@@ -1,20 +1,22 @@
-.otsukimi-divider {
-  width: 100%;
-  height: 1px;
+@layer otsukimi {
+  .otsukimi-divider {
+    width: 100%;
+    height: 1px;
 
-  border: 0;
+    border: 0;
 
-  background: var(--otsukimi-color-border-default);
-}
+    background: var(--otsukimi-color-border-default);
+  }
 
-.otsukimi-divider-dashed {
-  height: 1px;
+  .otsukimi-divider-dashed {
+    height: 1px;
 
-  background: repeating-linear-gradient(
-    to right,
-    var(--otsukimi-color-border-default) 0,
-    var(--otsukimi-color-border-default) 0.125em,
-    transparent 0.125em,
-    transparent 0.25em
-  );
+    background: repeating-linear-gradient(
+      to right,
+      var(--otsukimi-color-border-default) 0,
+      var(--otsukimi-color-border-default) 0.125em,
+      transparent 0.125em,
+      transparent 0.25em
+    );
+  }
 }

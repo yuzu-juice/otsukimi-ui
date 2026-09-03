@@ -1,48 +1,50 @@
-.otsukimi-search-bar {
-  width: 100%;
-  min-height: 3em;
+@layer otsukimi {
+  .otsukimi-search-bar {
+    width: 100%;
+    min-height: 3em;
 
-  display: flex;
-  align-items: center;
-  gap: 0.3125em;
-}
+    display: flex;
+    align-items: center;
+    gap: 0.3125em;
+  }
 
-.otsukimi-search-bar-input {
-  flex: 1 1 auto;
-  min-width: 0;
-  min-height: 3em;
-  box-sizing: border-box;
-
-  padding: 0 1em;
-
-  border: 1px solid var(--otsukimi-color-border-default);
-  border-radius: var(--otsukimi-radius-md);
-
-  background: var(--otsukimi-color-bg-surface);
-
-  font-family: var(--otsukimi-font-body-family);
-  font-size: 1rem;
-  font-weight: 400;
-
-  color: var(--otsukimi-color-text-primary);
-
-  transition:
-    border-color 0.15s ease,
-    box-shadow 0.15s ease;
-}
-
-.otsukimi-search-bar-input::placeholder {
-  color: var(--otsukimi-color-text-secondary);
-}
-
-.otsukimi-search-bar-button {
-  flex: 0 0 auto;
-  min-width: 0;
-  padding: 0.75em 1.25em;
-}
-
-@media (prefers-reduced-motion: reduce) {
   .otsukimi-search-bar-input {
-    transition: none;
+    flex: 1 1 auto;
+    min-width: 0;
+    min-height: 3em;
+    box-sizing: border-box;
+
+    padding: 0 1em;
+
+    border: 1px solid var(--otsukimi-color-border-default);
+    border-radius: var(--otsukimi-radius-md);
+
+    background: var(--otsukimi-color-bg-surface);
+
+    font-family: var(--otsukimi-font-body-family);
+    font-size: 1rem;
+    font-weight: 400;
+
+    color: var(--otsukimi-color-text-primary);
+
+    transition:
+      border-color 0.15s ease,
+      box-shadow 0.15s ease;
+  }
+
+  .otsukimi-search-bar-input::placeholder {
+    color: var(--otsukimi-color-text-secondary);
+  }
+
+  .otsukimi-search-bar-button {
+    flex: 0 0 auto;
+    min-width: 0;
+    padding: 0.75em 1.25em;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .otsukimi-search-bar-input {
+      transition: none;
+    }
   }
 }

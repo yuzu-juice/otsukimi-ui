@@ -1,15 +1,17 @@
-.otsukimi-card {
-  box-sizing: border-box;
+@layer otsukimi {
+  .otsukimi-card {
+    box-sizing: border-box;
 
-  padding: 1.5em 1.75em;
+    padding: 1.5em 1.75em;
 
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
 
-  border-radius: var(--otsukimi-radius-md);
-  background: var(--otsukimi-color-bg-surface);
-  box-shadow: var(--otsukimi-shadow-md);
+    border-radius: var(--otsukimi-radius-md);
+    background: var(--otsukimi-color-bg-surface);
+    box-shadow: var(--otsukimi-shadow-md);
 
-  color: var(--otsukimi-color-text-primary);
+    color: var(--otsukimi-color-text-primary);
+  }
 }

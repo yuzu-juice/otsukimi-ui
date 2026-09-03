@@ -1,82 +1,84 @@
-.otsukimi-button {
-  height: 3em;
-  padding: 0 1.25em;
-  box-sizing: border-box;
-
-  border-radius: var(--otsukimi-radius-full);
-  border: none;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.625em;
-
-  font-family: var(--otsukimi-font-body-family);
-  font-size: 1rem;
-  font-weight: 700;
-
-  color: var(--otsukimi-color-text-primary);
-
-  background: linear-gradient(
-    90deg,
-    var(--otsukimi-color-brand-primary-soft),
-    var(--otsukimi-color-secondary),
-    var(--otsukimi-color-accent-soft)
-  );
-
-  box-shadow: var(--otsukimi-shadow-md);
-
-  cursor: pointer;
-
-  transition:
-    transform 0.15s ease,
-    box-shadow 0.15s ease;
-}
-
-.otsukimi-button:hover:not(:disabled) {
-  box-shadow: var(--otsukimi-shadow-lg);
-  transform: translateY(-1px);
-}
-
-.otsukimi-button:active:not(:disabled) {
-  transform: translateY(0);
-}
-
-.otsukimi-button:focus-visible {
-  outline: 2px solid var(--otsukimi-color-brand-primary-deep);
-  outline-offset: 2px;
-}
-
-.otsukimi-button:disabled {
-  background: var(--otsukimi-color-border-default);
-  color: var(--otsukimi-color-text-secondary);
-  box-shadow: var(--otsukimi-shadow-sm);
-  cursor: not-allowed;
-}
-
-.otsukimi-button-transparent {
-  background: transparent;
-  border: 2px solid var(--otsukimi-color-border-default);
-  color: var(--otsukimi-color-text-primary);
-
-  box-shadow: var(--otsukimi-shadow-sm);
-}
-
-.otsukimi-button svg {
-  width: 24px;
-  height: 24px;
-}
-
-.otsukimi-button-moon svg {
-  color: var(--otsukimi-color-highlight-default);
-}
-
-.otsukimi-button-moon {
-  gap: 0.3125em;
-}
-
-@media (prefers-reduced-motion: reduce) {
+@layer otsukimi {
   .otsukimi-button {
-    transition: none;
+    height: 3em;
+    padding: 0 1.25em;
+    box-sizing: border-box;
+
+    border-radius: var(--otsukimi-radius-full);
+    border: none;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625em;
+
+    font-family: var(--otsukimi-font-body-family);
+    font-size: 1rem;
+    font-weight: 700;
+
+    color: var(--otsukimi-color-text-primary);
+
+    background: linear-gradient(
+      90deg,
+      var(--otsukimi-color-brand-primary-soft),
+      var(--otsukimi-color-secondary),
+      var(--otsukimi-color-accent-soft)
+    );
+
+    box-shadow: var(--otsukimi-shadow-md);
+
+    cursor: pointer;
+
+    transition:
+      transform 0.15s ease,
+      box-shadow 0.15s ease;
+  }
+
+  .otsukimi-button:hover:not(:disabled) {
+    box-shadow: var(--otsukimi-shadow-lg);
+    transform: translateY(-1px);
+  }
+
+  .otsukimi-button:active:not(:disabled) {
+    transform: translateY(0);
+  }
+
+  .otsukimi-button:focus-visible {
+    outline: 2px solid var(--otsukimi-color-brand-primary-deep);
+    outline-offset: 2px;
+  }
+
+  .otsukimi-button:disabled {
+    background: var(--otsukimi-color-border-default);
+    color: var(--otsukimi-color-text-secondary);
+    box-shadow: var(--otsukimi-shadow-sm);
+    cursor: not-allowed;
+  }
+
+  .otsukimi-button-transparent {
+    background: transparent;
+    border: 2px solid var(--otsukimi-color-border-default);
+    color: var(--otsukimi-color-text-primary);
+
+    box-shadow: var(--otsukimi-shadow-sm);
+  }
+
+  .otsukimi-button svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .otsukimi-button-moon svg {
+    color: var(--otsukimi-color-highlight-default);
+  }
+
+  .otsukimi-button-moon {
+    gap: 0.3125em;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .otsukimi-button {
+      transition: none;
+    }
   }
 }
