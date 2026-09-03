@@ -1,74 +1,76 @@
-.otsukimi-accordion {
-  width: 100%;
-}
+@layer otsukimi {
+  .otsukimi-accordion {
+    width: 100%;
+  }
 
-.otsukimi-accordion-header {
-  width: 100%;
-  min-height: 2.4em;
-  box-sizing: border-box;
-
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-
-  padding: 0 0.8em;
-
-  border-radius: var(--otsukimi-radius-md);
-  border: 1px solid var(--otsukimi-color-border-default);
-
-  background: var(--otsukimi-color-bg-surface);
-
-  font-family: var(--otsukimi-font-heading-family);
-  font-size: 1.25rem;
-  font-weight: 500;
-
-  color: var(--otsukimi-color-text-primary);
-
-  cursor: pointer;
-
-  transition:
-    border-color 0.15s ease,
-    box-shadow 0.15s ease;
-}
-
-.otsukimi-accordion-header:hover {
-  box-shadow: var(--otsukimi-shadow-sm);
-}
-
-.otsukimi-accordion-header:focus-visible {
-  outline: 2px solid var(--otsukimi-color-brand-primary-deep);
-  outline-offset: 2px;
-}
-
-.otsukimi-accordion-open .otsukimi-accordion-header {
-  border-color: var(--otsukimi-color-brand-primary-deep);
-}
-
-.otsukimi-accordion-header svg {
-  width: 24px;
-  height: 24px;
-
-  color: var(--otsukimi-color-brand-primary-deep);
-}
-
-.otsukimi-accordion-content {
-  padding: 1em 1.6875em;
-
-  font-family: var(--otsukimi-font-body-family);
-  font-size: 1rem;
-  font-weight: 400;
-
-  line-height: 1.5;
-
-  color: var(--otsukimi-color-text-primary);
-}
-
-.otsukimi-accordion-content[hidden] {
-  display: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
   .otsukimi-accordion-header {
-    transition: none;
+    width: 100%;
+    min-height: 2.4em;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+
+    padding: 0 0.8em;
+
+    border-radius: var(--otsukimi-radius-md);
+    border: 1px solid var(--otsukimi-color-border-default);
+
+    background: var(--otsukimi-color-bg-surface);
+
+    font-family: var(--otsukimi-font-heading-family);
+    font-size: 1.25rem;
+    font-weight: 500;
+
+    color: var(--otsukimi-color-text-primary);
+
+    cursor: pointer;
+
+    transition:
+      border-color 0.15s ease,
+      box-shadow 0.15s ease;
+  }
+
+  .otsukimi-accordion-header:hover {
+    box-shadow: var(--otsukimi-shadow-sm);
+  }
+
+  .otsukimi-accordion-header:focus-visible {
+    outline: 2px solid var(--otsukimi-color-brand-primary-deep);
+    outline-offset: 2px;
+  }
+
+  .otsukimi-accordion-open .otsukimi-accordion-header {
+    border-color: var(--otsukimi-color-brand-primary-deep);
+  }
+
+  .otsukimi-accordion-header svg {
+    width: 24px;
+    height: 24px;
+
+    color: var(--otsukimi-color-brand-primary-deep);
+  }
+
+  .otsukimi-accordion-content {
+    padding: 1em 1.6875em;
+
+    font-family: var(--otsukimi-font-body-family);
+    font-size: 1rem;
+    font-weight: 400;
+
+    line-height: 1.5;
+
+    color: var(--otsukimi-color-text-primary);
+  }
+
+  .otsukimi-accordion-content[hidden] {
+    display: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .otsukimi-accordion-header {
+      transition: none;
+    }
   }
 }

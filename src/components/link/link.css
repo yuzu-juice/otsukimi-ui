@@ -1,35 +1,37 @@
-.otsukimi-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 5px;
-
-  font-family: var(--otsukimi-font-body-family);
-  font-size: 1rem;
-  font-weight: 400;
-
-  color: var(--otsukimi-color-brand-primary-deep);
-
-  text-decoration: none;
-
-  cursor: pointer;
-}
-
-.otsukimi-link:focus-visible {
-  outline: 2px solid var(--otsukimi-color-brand-primary-deep);
-  outline-offset: 2px;
-}
-
-.otsukimi-link svg {
-  width: 24px;
-  height: 24px;
-
-  color: var(--otsukimi-color-brand-primary-deep);
-}
-
-@media (prefers-reduced-motion: reduce) {
+@layer otsukimi {
   .otsukimi-link {
-    transition: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    font-family: var(--otsukimi-font-body-family);
+    font-size: 1rem;
+    font-weight: 400;
+
+    color: var(--otsukimi-color-brand-primary-deep);
+
+    text-decoration: none;
+
+    cursor: pointer;
+  }
+
+  .otsukimi-link:focus-visible {
+    outline: 2px solid var(--otsukimi-color-brand-primary-deep);
+    outline-offset: 2px;
+  }
+
+  .otsukimi-link svg {
+    width: 24px;
+    height: 24px;
+
+    color: var(--otsukimi-color-brand-primary-deep);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .otsukimi-link {
+      transition: none;
+    }
   }
 }

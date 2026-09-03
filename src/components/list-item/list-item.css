@@ -1,27 +1,29 @@
-.otsukimi-list-item {
-  display: flex;
-  align-items: center;
+@layer otsukimi {
+  .otsukimi-list-item {
+    display: flex;
+    align-items: center;
 
-  min-height: 1.5em;
+    min-height: 1.5em;
 
-  gap: 0.625em;
+    gap: 0.625em;
 
-  font-family: var(--otsukimi-font-body-family);
-  font-size: 1rem;
-  font-weight: 400;
+    font-family: var(--otsukimi-font-body-family);
+    font-size: 1rem;
+    font-weight: 400;
 
-  color: var(--otsukimi-color-text-primary);
-}
+    color: var(--otsukimi-color-text-primary);
+  }
 
-.otsukimi-list-item svg {
-  width: 24px;
-  height: 24px;
-}
+  .otsukimi-list-item svg {
+    width: 24px;
+    height: 24px;
+  }
 
-.otsukimi-list-item-star svg {
-  color: var(--otsukimi-color-highlight-default);
-}
+  .otsukimi-list-item-star svg {
+    color: var(--otsukimi-color-highlight-default);
+  }
 
-.otsukimi-list-item-dot svg {
-  color: var(--otsukimi-color-brand-primary-deep);
+  .otsukimi-list-item-dot svg {
+    color: var(--otsukimi-color-brand-primary-deep);
+  }
 }
